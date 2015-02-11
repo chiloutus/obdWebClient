@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+
+
+    Please select from this list of options:
+    {{ working_dir }}
+    <ul>
+        <li>Get vehicle data <a href="{{vehicle_data_url}}">here</a>.
+        <li>Add a vehicle <a href="{{add_vehicle_url}}">here</a>.
+
+    </ul>
+    <body>{{ messages if messages != None }}
+    <a href="{{ sign_out_url }}">Sign Out</a></body>
+
+
+{% endblock %}
