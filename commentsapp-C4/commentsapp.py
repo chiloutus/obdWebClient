@@ -160,26 +160,29 @@ def new_user():
                     row = cur.fetchone()
 
                 id += 1
-                #sql = "INSERT INTO owner (ownerId,firstName,lastName,email,password) VALUES ('{0}','{1}','{2}','{3}','{4}')".format(id,firstName,lastName,email,passWord)
+
+                #unpack JSON
+                # Parse the JSON
+                objs = json.loads(request.POST)
+
+                # Iterate through the stuff in the list
+                for o in objs:
+                    firstName = o.firstName
+                    lastName = o.lastName
+                    email = o.email
+                    passwd = o.passwd
+
+
+
+                sql = "INSERT INTO owner (ownerId,firstName,lastName,email,password) VALUES ('{0}','{1}','{2}','{3}','{4}')".format(id,firstName,lastName,email,passwd)
 
                 cur.execute(sql)
 
                 conn.commit()
-                update = "Your account was created succesfully"
-                return render_template("login.html",register_url=url_for('register'))
             except:
-                conn.rollback()
-                error = "There was an error adding your account to the database, please contact customer support"
-                return render_template('register.html',home_url = url_for('webApp'),messages=error)
-            try:
-                data = json.loads(request.data)
-                #print data
-            except (ValueError, KeyError, TypeError):
-                # Not valid information, bail out and return an error
-                return jsonify({'error': 'opps'})
-            collection.insert({"name": data['name'], "handle": data['handle'] })
-          # print collection.count()
-            return jsonify({'status': 'successful'})
+                #do something
+                print("error")
+
 
 @app.route('/signOut')
 def signOut():
