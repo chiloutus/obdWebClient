@@ -12,7 +12,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/OBDReader$commentsapp.coverage" NAME="commentsapp Coverage Results" MODIFIED="1423694710431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commentsapp-C4" />
+    <SUITE FILE_PATH="coverage/OBDReader$commentsapp.coverage" NAME="commentsapp Coverage Results" MODIFIED="1425541936569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commentsapp-C4" />
     <SUITE FILE_PATH="coverage/OBDReader$OBDReader.coverage" NAME="OBDReader Coverage Results" MODIFIED="1423513646826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -27,11 +27,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="commentsapp.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="commentsapp.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/commentsapp-C4/commentsapp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2037" max-vertical-offset="2669">
-              <caret line="136" column="42" selection-start-line="136" selection-start-column="42" selection-end-line="136" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.8415446" vertical-offset="2598" max-vertical-offset="3349">
+              <caret line="192" column="27" selection-start-line="192" selection-start-column="27" selection-end-line="192" selection-end-column="27" />
+              <folding>
+                <marker date="1425541935082" expanded="true" signature="867:990" placeholder="SELECT * FRO..owner..." />
+                <marker date="1425541935082" expanded="true" signature="2519:2553" placeholder="SELECT * FRO..car..." />
+                <marker date="1425541935082" expanded="true" signature="3824:3917" placeholder="INSERT INTO ..." />
+                <marker date="1425541935082" expanded="true" signature="5095:5120" placeholder="SELECT owner..owner..." />
+                <marker date="1425541935082" expanded="true" signature="5363:5463" placeholder="INSERT INTO ..." />
+                <marker date="1425541935082" expanded="true" signature="6233:6258" placeholder="SELECT owner..owner..." />
+                <marker date="1425541935082" expanded="true" signature="6582:6682" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="flask_app.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flask_app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -66,10 +84,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="register.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commentsapp-C4/templates/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16410257" vertical-offset="380" max-vertical-offset="1190">
+            <state vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="1190">
               <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
               <folding />
             </state>
@@ -91,16 +109,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="442">
               <caret line="8" column="112" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://C:/Python34/Lib/site-packages/flask/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="24820" max-vertical-offset="31416">
-              <caret line="1460" column="0" selection-start-line="1460" selection-start-column="0" selection-end-line="1460" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -145,16 +153,18 @@
         <option value="$PROJECT_DIR$/commentsapp-C4/templates/vehicleData.html" />
         <option value="$PROJECT_DIR$/commentsapp-C4/templates/webApp.html" />
         <option value="$PROJECT_DIR$/commentsapp-C4/templates/login.html" />
-        <option value="$PROJECT_DIR$/commentsapp-C4/commentsapp.py" />
         <option value="$PROJECT_DIR$/commentsapp-C4/templates/register.html" />
         <option value="[localhost] CONSOLE - localhost" />
+        <option value="$PROJECT_DIR$/commentsapp-C4/commentsapp.py" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="width" value="884" />
-    <option name="height" value="992" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -273,7 +283,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -344,6 +353,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -359,7 +369,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="F:/mysql-connector-java-5.1.34/mysql-connector-java-5.1.34-bin.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../gradleBuild" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FullScreen" value="false" />
@@ -558,9 +568,6 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -580,6 +587,9 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
@@ -617,10 +627,6 @@
       <option name="usbDebugPort" value="7936" />
       <method />
     </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -640,6 +646,10 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -824,15 +834,22 @@
       <workItem from="1423689121296" duration="4180000" />
       <workItem from="1423693325117" duration="1422000" />
       <workItem from="1423694810893" duration="24000" />
+      <workItem from="1423698603755" duration="656000" />
+      <workItem from="1423941680796" duration="685000" />
+      <workItem from="1424149095982" duration="46000" />
+      <workItem from="1425491693202" duration="2150000" />
+      <workItem from="1425502989924" duration="1600000" />
+      <workItem from="1425539784102" duration="707000" />
+      <workItem from="1425540835832" duration="1699000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35319000" />
+    <option name="totallyTimeSpent" value="42862000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="884" height="992" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -844,7 +861,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5895349" sideWeight="0.7191283" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19534884" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1939834" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -852,9 +869,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292978" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14430244" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19534884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1939834" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32906976" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -909,14 +926,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/commentsapp-C4/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="425">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/commentsapp-C4/templates/webApp.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="391">
@@ -929,7 +938,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1668" max-vertical-offset="2431">
           <caret line="109" column="43" selection-start-line="109" selection-start-column="43" selection-end-line="109" selection-end-column="43" />
-          <folding />
+          <folding>
+            <marker date="1425541935082" expanded="true" signature="867:990" placeholder="SELECT * FRO..owner..." />
+            <marker date="1425541935082" expanded="true" signature="2519:2553" placeholder="SELECT * FRO..car..." />
+            <marker date="1425541935082" expanded="true" signature="3824:3917" placeholder="INSERT INTO ..." />
+            <marker date="1425541935082" expanded="true" signature="5095:5120" placeholder="SELECT owner..owner..." />
+            <marker date="1425541935082" expanded="true" signature="5363:5463" placeholder="INSERT INTO ..." />
+            <marker date="1425541935082" expanded="true" signature="6233:6258" placeholder="SELECT owner..owner..." />
+            <marker date="1425541935082" expanded="true" signature="6582:6682" placeholder="INSERT INTO ..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1015,7 +1032,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="229" max-vertical-offset="884">
           <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
-          <folding />
+          <folding>
+            <marker date="1425541935082" expanded="true" signature="867:990" placeholder="SELECT * FRO..owner..." />
+            <marker date="1425541935082" expanded="true" signature="2519:2553" placeholder="SELECT * FRO..car..." />
+            <marker date="1425541935082" expanded="true" signature="3824:3917" placeholder="INSERT INTO ..." />
+            <marker date="1425541935082" expanded="true" signature="5095:5120" placeholder="SELECT owner..owner..." />
+            <marker date="1425541935082" expanded="true" signature="5363:5463" placeholder="INSERT INTO ..." />
+            <marker date="1425541935082" expanded="true" signature="6233:6258" placeholder="SELECT owner..owner..." />
+            <marker date="1425541935082" expanded="true" signature="6582:6682" placeholder="INSERT INTO ..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1083,7 +1108,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="442">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1425541935082" expanded="true" signature="867:990" placeholder="SELECT * FRO..owner..." />
+            <marker date="1425541935082" expanded="true" signature="2519:2553" placeholder="SELECT * FRO..car..." />
+            <marker date="1425541935082" expanded="true" signature="3824:3917" placeholder="INSERT INTO ..." />
+            <marker date="1425541935082" expanded="true" signature="5095:5120" placeholder="SELECT owner..owner..." />
+            <marker date="1425541935082" expanded="true" signature="5363:5463" placeholder="INSERT INTO ..." />
+            <marker date="1425541935082" expanded="true" signature="6233:6258" placeholder="SELECT owner..owner..." />
+            <marker date="1425541935082" expanded="true" signature="6582:6682" placeholder="INSERT INTO ..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1120,7 +1153,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1425541935082" expanded="true" signature="867:990" placeholder="SELECT * FRO..owner..." />
+            <marker date="1425541935082" expanded="true" signature="2519:2553" placeholder="SELECT * FRO..car..." />
+            <marker date="1425541935082" expanded="true" signature="3824:3917" placeholder="INSERT INTO ..." />
+            <marker date="1425541935082" expanded="true" signature="5095:5120" placeholder="SELECT owner..owner..." />
+            <marker date="1425541935082" expanded="true" signature="5363:5463" placeholder="INSERT INTO ..." />
+            <marker date="1425541935082" expanded="true" signature="6233:6258" placeholder="SELECT owner..owner..." />
+            <marker date="1425541935082" expanded="true" signature="6582:6682" placeholder="INSERT INTO ..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1157,7 +1198,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1425541935082" expanded="true" signature="867:990" placeholder="SELECT * FRO..owner..." />
+            <marker date="1425541935082" expanded="true" signature="2519:2553" placeholder="SELECT * FRO..car..." />
+            <marker date="1425541935082" expanded="true" signature="3824:3917" placeholder="INSERT INTO ..." />
+            <marker date="1425541935082" expanded="true" signature="5095:5120" placeholder="SELECT owner..owner..." />
+            <marker date="1425541935082" expanded="true" signature="5363:5463" placeholder="INSERT INTO ..." />
+            <marker date="1425541935082" expanded="true" signature="6233:6258" placeholder="SELECT owner..owner..." />
+            <marker date="1425541935082" expanded="true" signature="6582:6682" placeholder="INSERT INTO ..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1281,19 +1330,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commentsapp-C4/commentsapp.py">
+    <entry file="file://$PROJECT_DIR$/commentsapp-C4/templates/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2037" max-vertical-offset="2669">
-          <caret line="136" column="42" selection-start-line="136" selection-start-column="42" selection-end-line="136" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="1190">
+          <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commentsapp-C4/templates/register.html">
+    <entry file="file://$PROJECT_DIR$/flask_app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16410257" vertical-offset="380" max-vertical-offset="1190">
-          <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="751">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commentsapp-C4/commentsapp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8415446" vertical-offset="2598" max-vertical-offset="3349">
+          <caret line="192" column="27" selection-start-line="192" selection-start-column="27" selection-end-line="192" selection-end-column="27" />
+          <folding>
+            <marker date="1425541935082" expanded="true" signature="867:990" placeholder="SELECT * FRO..owner..." />
+            <marker date="1425541935082" expanded="true" signature="2519:2553" placeholder="SELECT * FRO..car..." />
+            <marker date="1425541935082" expanded="true" signature="3824:3917" placeholder="INSERT INTO ..." />
+            <marker date="1425541935082" expanded="true" signature="5095:5120" placeholder="SELECT owner..owner..." />
+            <marker date="1425541935082" expanded="true" signature="5363:5463" placeholder="INSERT INTO ..." />
+            <marker date="1425541935082" expanded="true" signature="6233:6258" placeholder="SELECT owner..owner..." />
+            <marker date="1425541935082" expanded="true" signature="6582:6682" placeholder="INSERT INTO ..." />
+          </folding>
         </state>
       </provider>
     </entry>

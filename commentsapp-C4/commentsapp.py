@@ -2,7 +2,7 @@ import os,hashlib
 
 from flask import Flask, render_template, url_for, request,redirect,session
 app = Flask(__name__)
-import pymysql
+import pymysql,json
 def md5(word):
     hash = hashlib.md5()
     hash.update(word.encode('utf-8'))
@@ -139,6 +139,48 @@ def registering():
         conn.rollback()
         error = "There was an error adding your account to the database, please contact customer support"
         return render_template('register.html',home_url = url_for('webApp'),messages=error)
+
+
+@app.route('/new/user', methods=['POST'])
+def new_user():
+    conn = pymysql.connect(host='localhost', port=3306, user='root', passwd='gaz360', db='obdreader')
+
+    cur = conn.cursor()
+
+    if request.method == 'POST':
+        if request.headers['Content-Type'] == 'application/json':
+            sql = "SELECT ownerId FROM owner"
+            try:
+                cur.execute(sql)
+                row = cur.fetchone()
+                id = 0
+                while row is not None:
+                    if(int(row[0]) > id):
+                        id = int(row[0])
+                    row = cur.fetchone()
+
+                id += 1
+                #sql = "INSERT INTO owner (ownerId,firstName,lastName,email,password) VALUES ('{0}','{1}','{2}','{3}','{4}')".format(id,firstName,lastName,email,passWord)
+
+                cur.execute(sql)
+
+                conn.commit()
+                update = "Your account was created succesfully"
+                return render_template("login.html",register_url=url_for('register'))
+            except:
+                conn.rollback()
+                error = "There was an error adding your account to the database, please contact customer support"
+                return render_template('register.html',home_url = url_for('webApp'),messages=error)
+            try:
+                data = json.loads(request.data)
+                #print data
+            except (ValueError, KeyError, TypeError):
+                # Not valid information, bail out and return an error
+                return jsonify({'error': 'opps'})
+            collection.insert({"name": data['name'], "handle": data['handle'] })
+          # print collection.count()
+            return jsonify({'status': 'successful'})
+
 @app.route('/signOut')
 def signOut():
     session['ownerId'] = None
@@ -148,4 +190,4 @@ def signOut():
                            login_url=url_for("loginscreen"))
 app.config['SECRET_KEY'] = 'thisismysecretkeywhichyouwillneverguesshahahahahahahaha'
 if __name__== "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0',debug=True)
