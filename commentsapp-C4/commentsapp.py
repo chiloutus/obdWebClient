@@ -9,7 +9,7 @@ def md5(word):
     return hash.hexdigest()
 @app.route('/')
 def display_home():
-    session['ownerId'] = None
+    session['OwnerId'] = None
     return render_template("home.html",
                            the_title="Welcome to the Word Game, where all the fun is at.",
                            login_url=url_for("loginscreen"),
@@ -31,7 +31,7 @@ def login():
 
     if cur.execute(sql) != 0:
         result = cur.fetchall()
-        session['ownerId'] = result[0][0]
+        session['OwnerId'] = result[0][0]
         return redirect(url_for('webApp'))
     else:
         error = "Invalid credentials"
@@ -41,7 +41,7 @@ def login():
 
 @app.route('/webApp')
 def webApp():
-    if(session['ownerId'] == None):
+    if(session['OwnerId'] == None):
         return render_template("home.html",
                                the_title="Welcome to the Word Game, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
@@ -51,7 +51,7 @@ def webApp():
 
 @app.route('/vehicleData')
 def vehicleData():
-    if(session['ownerId'] == None):
+    if(session['OwnerId'] == None):
         return render_template("home.html",
                                the_title="Welcome to the Word Game, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
@@ -60,7 +60,7 @@ def vehicleData():
 
     cur = conn.cursor()
 
-    sql ="SELECT * FROM Car WHERE ownerId = "  + session['ownerId']
+    sql ="SELECT * FROM Car WHERE OwnerId = "  + session['OwnerId']
 
     if cur.execute(sql) != 0:
         result = list(cur.fetchall())
@@ -72,7 +72,7 @@ def vehicleData():
 
 @app.route('/ownerData')
 def ownerData():
-    if(session['ownerId'] == None):
+    if(session['OwnerId'] == None):
         return render_template("home.html",
                                the_title="Welcome to the Word Game, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
@@ -81,7 +81,7 @@ def ownerData():
 
     cur = conn.cursor()
 
-    sql ="SELECT Username,Name,Address,Email FROM Owner WHERE ownerId = "  + session['ownerId']
+    sql ="SELECT Username,Name,Address,Email FROM Owner WHERE OwnerId = "  + session['OwnerId']
 
     if cur.execute(sql) != 0:
         result = list(cur.fetchall())
@@ -93,14 +93,14 @@ def ownerData():
 
 @app.route('/addVehicle')
 def addVehicle():
-    if(session['ownerId'] == None):
+    if(session['OwnerId'] == None):
         return render_template("home.html",
                                the_title="Welcome to the Word Game, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
     return render_template('addVehicle.html',home_url= url_for('webApp'))
 @app.route('/addingVehicle', methods=['POST'])
 def addingVehicle():
-    if(session['ownerId'] == None):
+    if(session['OwnerId'] == None):
         return render_template("home.html",
                                the_title="Welcome to the Word Game, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
@@ -111,7 +111,7 @@ def addingVehicle():
     make = request.form.get("Make")
     model = request.form.get("Model")
 
-    sql = "INSERT INTO Car (`registration`, `ownerId`, `make`, `model`) VALUES ('{0}','{1}','{2}','{3}')".format(registration,session['ownerId'],make,model)
+    sql = "INSERT INTO Car (`registration`, `OwnerId`, `make`, `model`) VALUES ('{0}','{1}','{2}','{3}')".format(registration,session['OwnerId'],make,model)
     print(sql)
     try:
         cur.execute(sql)
@@ -137,7 +137,7 @@ def registering():
     passWord = md5((request.form.get("pass1")))
 
 
-    sql = "SELECT ownerId FROM Owner"
+    sql = "SELECT OwnerId FROM Owner"
     try:
         cur.execute(sql)
         row = cur.fetchone()
@@ -148,7 +148,7 @@ def registering():
             row = cur.fetchone()
 
         id += 1
-        sql = "INSERT INTO Owner (ownerId,firstName,lastName,email,password) VALUES ('{0}','{1}','{2}','{3}','{4}')".format(id,firstName,lastName,email,passWord)
+        sql = "INSERT INTO Owner (OwnerId,firstName,lastName,email,password) VALUES ('{0}','{1}','{2}','{3}','{4}')".format(id,firstName,lastName,email,passWord)
 
         cur.execute(sql)
 
@@ -170,7 +170,7 @@ def new_user():
 
     if request.method == 'POST':
         if request.headers['Content-Type'] == 'application/json':
-            sql = "SELECT ownerId FROM Owner"
+            sql = "SELECT OwnerId FROM Owner"
             try:
                 cur.execute(sql)
                 row = cur.fetchone()
@@ -195,7 +195,7 @@ def new_user():
 
 
 
-                sql = "INSERT INTO Owner (ownerId,firstName,lastName,email,password) VALUES ('{0}','{1}','{2}','{3}','{4}')".format(id,firstName,lastName,email,passwd)
+                sql = "INSERT INTO Owner (OwnerId,firstName,lastName,email,password) VALUES ('{0}','{1}','{2}','{3}','{4}')".format(id,firstName,lastName,email,passwd)
 
                 cur.execute(sql)
 
@@ -207,7 +207,7 @@ def new_user():
 
 @app.route('/signOut')
 def signOut():
-    session['ownerId'] = None
+    session['OwnerId'] = None
 
     return render_template("home.html",
                            the_title="Welcome to the Word Game, where all the fun is at.",
