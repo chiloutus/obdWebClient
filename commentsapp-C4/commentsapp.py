@@ -135,6 +135,7 @@ def registering():
     name = request.form.get("name")
     email = request.form.get("email")
     passWord = md5((request.form.get("pass1")))
+    address = request.form.get("address")
 
     #check if the username is already in the database
     sql = "SELECT Username FROM Owner WHERE Username =" + username
@@ -157,7 +158,8 @@ def registering():
             row = cur.fetchone()
 
         id += 1
-        sql = "INSERT INTO Owner (OwnerId,firstName,lastName,email,password) VALUES ('{0}','{1}','{2}','{3}','{4}')".format(id,firstName,lastName,email,passWord)
+        sql = "INSERT INTO Owner (OwnerId,Username,Password,Address,Email,Name) VALUES ('{0}','{1}','{2}','{3}','{4}')"\
+            .format(id,username,passWord,address,email,name)
 
         cur.execute(sql)
 
