@@ -35,13 +35,13 @@
       <file leaf-file-name="commentsapp.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/commentsapp-C4/commentsapp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15437393" vertical-offset="972" max-vertical-offset="3780">
-              <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.6174957" vertical-offset="1296" max-vertical-offset="3780">
+              <caret line="95" column="15" selection-start-line="95" selection-start-column="15" selection-end-line="95" selection-end-column="15" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
                 <element signature="e#166#252#0" expanded="false" />
-                <element signature="e#6953#7021#0" expanded="false" />
-                <element signature="e#7090#8786#0" expanded="false" />
+                <element signature="e#6955#7023#0" expanded="false" />
+                <element signature="e#7092#8788#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -885,7 +885,7 @@
       <workItem from="1425549974873" duration="2623000" />
       <workItem from="1425554546666" duration="13000" />
       <workItem from="1427207172506" duration="542000" />
-      <workItem from="1427208338487" duration="13300000" />
+      <workItem from="1427208338487" duration="13473000" />
     </task>
     <task id="LOCAL-00001" summary="Adding support for viewing data about the currently logged in user.">
       <created>1427209645618</created>
@@ -1097,11 +1097,17 @@
       <option name="project" value="LOCAL" />
       <updated>1427222634429</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Trying to sort the crashing problem">
+      <created>1427222730821</created>
+      <option name="number" value="00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1427222730821</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59470000" />
+    <option name="totallyTimeSpent" value="59643000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
@@ -1175,7 +1181,8 @@
     <MESSAGE value="Testing issues" />
     <MESSAGE value="Changing str() to repr()" />
     <MESSAGE value="Trying to find the type of object we are dealing with" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to find the type of object we are dealing with" />
+    <MESSAGE value="Trying to sort the crashing problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to sort the crashing problem" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1198,8 +1205,8 @@
           <folding>
             <element signature="e#0#27#0" expanded="true" />
             <element signature="e#166#252#0" expanded="false" />
-            <element signature="e#6953#7021#0" expanded="false" />
-            <element signature="e#7090#8786#0" expanded="false" />
+            <element signature="e#6955#7023#0" expanded="false" />
+            <element signature="e#7092#8788#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1275,8 +1282,8 @@
           <folding>
             <element signature="e#0#27#0" expanded="true" />
             <element signature="e#166#252#0" expanded="false" />
-            <element signature="e#6953#7021#0" expanded="false" />
-            <element signature="e#7090#8786#0" expanded="false" />
+            <element signature="e#6955#7023#0" expanded="false" />
+            <element signature="e#7092#8788#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1343,8 +1350,8 @@
           <folding>
             <element signature="e#0#27#0" expanded="true" />
             <element signature="e#166#252#0" expanded="false" />
-            <element signature="e#6953#7021#0" expanded="false" />
-            <element signature="e#7090#8786#0" expanded="false" />
+            <element signature="e#6955#7023#0" expanded="false" />
+            <element signature="e#7092#8788#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1400,8 +1407,8 @@
           <folding>
             <element signature="e#0#27#0" expanded="true" />
             <element signature="e#166#252#0" expanded="false" />
-            <element signature="e#6953#7021#0" expanded="false" />
-            <element signature="e#7090#8786#0" expanded="false" />
+            <element signature="e#6955#7023#0" expanded="false" />
+            <element signature="e#7092#8788#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1442,8 +1449,8 @@
           <folding>
             <element signature="e#0#27#0" expanded="true" />
             <element signature="e#166#252#0" expanded="false" />
-            <element signature="e#6953#7021#0" expanded="false" />
-            <element signature="e#7090#8786#0" expanded="false" />
+            <element signature="e#6955#7023#0" expanded="false" />
+            <element signature="e#7092#8788#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1484,8 +1491,8 @@
           <folding>
             <element signature="e#0#27#0" expanded="true" />
             <element signature="e#166#252#0" expanded="false" />
-            <element signature="e#6953#7021#0" expanded="false" />
-            <element signature="e#7090#8786#0" expanded="false" />
+            <element signature="e#6955#7023#0" expanded="false" />
+            <element signature="e#7092#8788#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1606,13 +1613,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/commentsapp-C4/commentsapp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15437393" vertical-offset="972" max-vertical-offset="3780">
-          <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.6174957" vertical-offset="1296" max-vertical-offset="3780">
+          <caret line="95" column="15" selection-start-line="95" selection-start-column="15" selection-end-line="95" selection-end-column="15" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
             <element signature="e#166#252#0" expanded="false" />
-            <element signature="e#6953#7021#0" expanded="false" />
-            <element signature="e#7090#8786#0" expanded="false" />
+            <element signature="e#6955#7023#0" expanded="false" />
+            <element signature="e#7092#8788#0" expanded="false" />
           </folding>
         </state>
       </provider>

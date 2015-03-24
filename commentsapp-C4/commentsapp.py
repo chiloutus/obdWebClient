@@ -93,7 +93,7 @@ def ownerData():
         return render_template('webApp.html',vehicle_data_url = url_for('vehicleData'),add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
                                sign_out_url=url_for('signOut'), messages=error)
 @app.route('/journeyData')
-def ownerData():
+def journeyData():
     if session['OwnerId'] is None:
         return render_template("home.html",
                                the_title="Welcome to the Word Game, where all the fun is at.",
