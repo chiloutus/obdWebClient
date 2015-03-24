@@ -82,6 +82,7 @@ def ownerData():
 
     cur = conn.cursor()
     id = str(session['OwnerId'])
+    print(id)
     sql = "SELECT Username,Name,Address,Email FROM Owner WHERE OwnerId = {}".format(id)
 
     if cur.execute(sql) != 0:
