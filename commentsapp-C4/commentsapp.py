@@ -61,7 +61,7 @@ def vehicleData():
 
     cur = conn.cursor()
 
-    sql = "SELECT * FROM Car WHERE OwnerId = " + str(session['OwnerId']) 
+    sql = "SELECT * FROM Car WHERE OwnerId = {}".format(str(session['OwnerId']))
 
     if cur.execute(sql) != 0:
         result = list(cur.fetchall())
@@ -82,7 +82,7 @@ def ownerData():
 
     cur = conn.cursor()
 
-    sql = "SELECT Username,Name,Address,Email FROM Owner WHERE OwnerId = " + str(session['OwnerId'])
+    sql = "SELECT Username,Name,Address,Email FROM Owner WHERE OwnerId = {}".format(str(session['OwnerId']))
 
     if cur.execute(sql) != 0:
         result = list(cur.fetchall())
