@@ -60,8 +60,8 @@ def vehicleData():
     conn = pymysql.connect(host='mysql.server', port=3306, user='chiloutus', passwd='gaz360', db='chiloutus$obdreader')
 
     cur = conn.cursor()
-
-    sql = "SELECT * FROM Car WHERE OwnerId = {}".format(str(session['OwnerId']))
+    id = str(session['OwnerId'])
+    sql = "SELECT * FROM Car WHERE OwnerId = {}".format(id)
 
     if cur.execute(sql) != 0:
         result = list(cur.fetchall())
@@ -81,8 +81,8 @@ def ownerData():
     conn = pymysql.connect(host='mysql.server', port=3306, user='chiloutus', passwd='gaz360', db='chiloutus$obdreader')
 
     cur = conn.cursor()
-
-    sql = "SELECT Username,Name,Address,Email FROM Owner WHERE OwnerId = {}".format(str(session['OwnerId']))
+    id = str(session['OwnerId'])
+    sql = "SELECT Username,Name,Address,Email FROM Owner WHERE OwnerId = {}".format(id)
 
     if cur.execute(sql) != 0:
         result = list(cur.fetchall())
