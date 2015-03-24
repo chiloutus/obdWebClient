@@ -11,7 +11,7 @@ def md5(word):
 def display_home():
     session['OwnerId'] = None
     return render_template("home.html",
-                           the_title="Welcome to the Word Game, where all the fun is at.",
+                           the_title="Welcome to the OBD Reader application",
                            login_url=url_for("loginscreen"),
                            working_dir= os.getcwd())
 
@@ -33,7 +33,7 @@ def login():
         result = cur.fetchall()
         session['OwnerId'] = result[0][0]
         return render_template('webApp.html',vehicle_data_url = url_for('vehicleData'),add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
-                               sign_out_url=url_for('signOut'),messages = error )
+                               sign_out_url=url_for('signOut') )
     else:
         error = "Invalid credentials"
         return render_template('login.html',
@@ -48,7 +48,7 @@ def webApp():
                                login_url=url_for("loginscreen"),)
 
     return render_template('webApp.html',vehicle_data_url = url_for('vehicleData'),add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
-                               sign_out_url=url_for('signOut'),messages = error )
+                               sign_out_url=url_for('signOut') )
 
 @app.route('/vehicleData')
 def vehicleData():
@@ -82,7 +82,7 @@ def ownerData():
 
     cur = conn.cursor()
 
-    sql ="SELECT Username,Name,Address,Email FROM Owner WHERE OwnerId = "  + session['OwnerId']
+    sql ="SELECT Username,Name,Address,Email FROM Owner WHERE OwnerId = \""  + session['OwnerId'] + "\""
 
     if cur.execute(sql) != 0:
         result = list(cur.fetchall())
