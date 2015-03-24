@@ -145,7 +145,7 @@ def registering():
         res = cur.rowcount()
         if res != 0:
             return render_template('register.html',home_url = url_for('webApp'),
-                                   messages= "This username has already been taken, please try again ")
+                                   messages= "This username has already been taken, please try again, there were  " + cur.rowcount() + "other entries")
 
 
         sql = "SELECT OwnerId FROM Owner"
