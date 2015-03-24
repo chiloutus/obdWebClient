@@ -42,7 +42,7 @@ def login():
 
 @app.route('/webApp')
 def webApp():
-    if(session['OwnerId'] == None):
+    if session['OwnerId'] is None:
         return render_template("home.html",
                                the_title="Welcome to the Word Game, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
@@ -52,7 +52,7 @@ def webApp():
 
 @app.route('/vehicleData')
 def vehicleData():
-    if(session['OwnerId'] == None):
+    if session['OwnerId'] is None:
         return render_template("home.html",
                                the_title="Welcome to the Word Game, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
@@ -61,7 +61,7 @@ def vehicleData():
 
     cur = conn.cursor()
 
-    sql ="SELECT * FROM Car WHERE OwnerId = \""  + str(session['OwnerId']) + "\""
+    sql = "SELECT * FROM Car WHERE OwnerId = " + str(session['OwnerId']) 
 
     if cur.execute(sql) != 0:
         result = list(cur.fetchall())
@@ -73,7 +73,7 @@ def vehicleData():
 
 @app.route('/ownerData')
 def ownerData():
-    if(session['OwnerId'] == None):
+    if session['OwnerId'] is None:
         return render_template("home.html",
                                the_title="Welcome to the Word Game, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
@@ -82,7 +82,7 @@ def ownerData():
 
     cur = conn.cursor()
 
-    sql ="SELECT Username,Name,Address,Email FROM Owner WHERE OwnerId = \""  + str(session['OwnerId']) + "\""
+    sql = "SELECT Username,Name,Address,Email FROM Owner WHERE OwnerId = " + str(session['OwnerId'])
 
     if cur.execute(sql) != 0:
         result = list(cur.fetchall())
@@ -90,10 +90,10 @@ def ownerData():
     else:
         error = "An error has occured retrieving your account."
         return render_template('webApp.html',vehicle_data_url = url_for('vehicleData'),add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
-                               sign_out_url=url_for('signOut'),messages = error )
+                               sign_out_url=url_for('signOut'), messages=error)
 @app.route('/journeyData')
 def ownerData():
-    if(session['OwnerId'] == None):
+    if session['OwnerId'] is None:
         return render_template("home.html",
                                the_title="Welcome to the Word Game, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
@@ -102,7 +102,7 @@ def ownerData():
 
     cur = conn.cursor()
 
-    sql ="SELECT * FROM Journey Inner Join  WHERE OwnerId = "  + session['OwnerId']
+    sql = "SELECT * FROM Journey Inner Join  WHERE OwnerId = " + session['OwnerId']
 
     if cur.execute(sql) != 0:
         result = list(cur.fetchall())
@@ -113,14 +113,14 @@ def ownerData():
                                sign_out_url=url_for('signOut'),messages = error )
 @app.route('/addVehicle')
 def addVehicle():
-    if(session['OwnerId'] == None):
+    if session['OwnerId'] is None:
         return render_template("home.html",
                                the_title="Welcome to the Word Game, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
     return render_template('addVehicle.html',home_url= url_for('webApp'))
 @app.route('/addingVehicle', methods=['POST'])
 def addingVehicle():
-    if(session['OwnerId'] == None):
+    if session['OwnerId'] is None:
         return render_template("home.html",
                                the_title="Welcome to the Word Game, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
@@ -137,11 +137,13 @@ def addingVehicle():
         cur.execute(sql)
         conn.commit()
         update = "The vehicle was added to your account succesfully"
-        return render_template('webApp.html',messages = update ,home_url = url_for('webApp'),vehicle_data_url = url_for('vehicleData'),add_vehicle_url = url_for('addVehicle'))
+        return render_template('webApp.html', messages=update, home_url=url_for('webApp'), vehicle_data_url = url_for('vehicleData'),
+                               add_vehicle_url=url_for('addVehicle'))
     except:
         conn.rollback()
         error = "There was an error adding your vehicle to the database, please contact customer support"
-        return render_template('webApp.html',messages = error,home_url = url_for('webApp'),vehicle_data_url = url_for('vehicleData'),add_vehicle_url = url_for('addVehicle'))
+        return render_template('webApp.html', messages = error,home_url=url_for('webApp'), vehicle_data_url = url_for('vehicleData'),
+                               add_vehicle_url=url_for('addVehicle'))
 @app.route('/register')
 def register():
     return render_template('register.html',home_url = url_for('webApp'))
