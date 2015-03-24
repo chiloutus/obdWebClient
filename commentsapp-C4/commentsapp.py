@@ -31,7 +31,7 @@ def login():
 
     if cur.execute(sql) != 0:
         result = cur.fetchall()
-        session['OwnerId'] = result[0][0]
+        session['OwnerId'] = str(result[0][0])
         return render_template('webApp.html',vehicle_data_url = url_for('vehicleData'),add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
                                sign_out_url=url_for('signOut') )
     else:
@@ -61,7 +61,7 @@ def vehicleData():
 
     cur = conn.cursor()
     i = session['OwnerId']
-    print(str(type(session['OwnerId'])))
+    print(type(session['OwnerId']))
     print(id)
     sql = "SELECT * FROM Car WHERE OwnerId = {}".format(id)
 
@@ -83,7 +83,7 @@ def ownerData():
     conn = pymysql.connect(host='mysql.server', port=3306, user='chiloutus', passwd='gaz360', db='chiloutus$obdreader')
 
     cur = conn.cursor()
-    id = str(session['OwnerId'])
+    id = session['OwnerId']
     print(id)
     sql = "SELECT Username,Name,Address,Email FROM Owner WHERE OwnerId = {}".format(id)
 
