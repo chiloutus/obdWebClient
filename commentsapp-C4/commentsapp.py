@@ -61,7 +61,7 @@ def vehicleData():
 
     cur = conn.cursor()
     i = session['OwnerId']
-    id = str(i)
+    id = repr(i)
     print(id)
     sql = "SELECT * FROM Car WHERE OwnerId = {}".format(id)
 
