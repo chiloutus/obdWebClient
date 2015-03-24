@@ -28,8 +28,8 @@ def login():
 
     sql ="SELECT * FROM Owner WHERE email = \"" + request.form['Email'] + "\" AND password = \""+ md5(request.form['Password']) + "\""
     #let's look at IDs and names coming from the database
-    #cur.execute("""SELECT * FROM obdreader.owner WHERE obdreader.owner.email = \"gazlynam@lynam.com\" AND password = """"+ hash""""+ """;"""""")
-    #cur.execute("""SELECT * FROM owner WHERE email = request.form['email'] AND password = hash;""")
+    #cur.execute("""SELECT * FROM obdreader.Owner WHERE obdreader.Owner.email = \"gazlynam@lynam.com\" AND password = """"+ hash""""+ """;"""""")
+    #cur.execute("""SELECT * FROM Owner WHERE email = request.form['email'] AND password = hash;""")
 
 
     if cur.execute(sql) != 0:
@@ -140,7 +140,7 @@ def registering():
     passWord = md5((request.form.get("pass1")))
 
 
-    sql = "SELECT ownerId FROM owner"
+    sql = "SELECT ownerId FROM Owner"
     try:
         cur.execute(sql)
         row = cur.fetchone()
@@ -151,7 +151,7 @@ def registering():
             row = cur.fetchone()
 
         id += 1
-        sql = "INSERT INTO owner (ownerId,firstName,lastName,email,password) VALUES ('{0}','{1}','{2}','{3}','{4}')".format(id,firstName,lastName,email,passWord)
+        sql = "INSERT INTO Owner (ownerId,firstName,lastName,email,password) VALUES ('{0}','{1}','{2}','{3}','{4}')".format(id,firstName,lastName,email,passWord)
 
         cur.execute(sql)
 
@@ -172,7 +172,7 @@ def new_user():
 
     if request.method == 'POST':
         if request.headers['Content-Type'] == 'application/json':
-            sql = "SELECT ownerId FROM owner"
+            sql = "SELECT ownerId FROM Owner"
             try:
                 cur.execute(sql)
                 row = cur.fetchone()
@@ -197,7 +197,7 @@ def new_user():
 
 
 
-                sql = "INSERT INTO owner (ownerId,firstName,lastName,email,password) VALUES ('{0}','{1}','{2}','{3}','{4}')".format(id,firstName,lastName,email,passwd)
+                sql = "INSERT INTO Owner (ownerId,firstName,lastName,email,password) VALUES ('{0}','{1}','{2}','{3}','{4}')".format(id,firstName,lastName,email,passwd)
 
                 cur.execute(sql)
 
