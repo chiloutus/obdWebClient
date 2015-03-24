@@ -155,7 +155,7 @@ def registering():
         conn.commit()
         update = "Your account was created succesfully"
         return render_template("login.html",register_url=url_for('register'))
-    except Exception, err:
+    except Exception as err:
 
         conn.rollback()
         error = "There was an error adding your account to the database, please contact customer support"
