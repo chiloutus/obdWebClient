@@ -22,7 +22,7 @@ def loginscreen():
 @app.route('/login', methods=['POST'])
 def login():
 
-    conn = pymysql.connect(host='localhost', port=3306, user='chiloutus', passwd='gaz360', db='obdreader')
+    conn = pymysql.connect(host='mysql.server', port=3306, user='chiloutus', passwd='gaz360', db='obdreader')
 
     cur = conn.cursor()
 
@@ -59,7 +59,7 @@ def vehicleData():
                                the_title="Welcome to the Word Game, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
 
-    conn = pymysql.connect(host='localhost', port=3306, user='chiloutus', passwd='gaz360', db='obdreader')
+    conn = pymysql.connect(host='mysql.server', port=3306, user='chiloutus', passwd='gaz360', db='obdreader')
 
     cur = conn.cursor()
 
@@ -80,7 +80,7 @@ def ownerData():
                                the_title="Welcome to the Word Game, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
 
-    conn = pymysql.connect(host='localhost', port=3306, user='chiloutus', passwd='gaz360', db='obdreader')
+    conn = pymysql.connect(host='mysql.server', port=3306, user='chiloutus', passwd='gaz360', db='obdreader')
 
     cur = conn.cursor()
 
@@ -107,7 +107,7 @@ def addingVehicle():
         return render_template("home.html",
                                the_title="Welcome to the Word Game, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
-    conn = pymysql.connect(host='localhost', port=3306, user='chiloutus', passwd='gaz360', db='obdreader')
+    conn = pymysql.connect(host='mysql.server', port=3306, user='chiloutus', passwd='gaz360', db='obdreader')
 
     cur = conn.cursor()
     registration = request.form.get("Registration")
@@ -131,7 +131,7 @@ def register():
 
 @app.route('/registering',methods=['POST'])
 def registering():
-    conn = pymysql.connect(host='localhost', port=3306, user='chiloutus', passwd='gaz360', db='obdreader')
+    conn = pymysql.connect(host='mysql.server', port=3306, user='chiloutus', passwd='gaz360', db='obdreader')
 
     cur = conn.cursor()
     firstName = request.form.get("firstName")
@@ -166,7 +166,7 @@ def registering():
 
 @app.route('/new/user', methods=['POST'])
 def new_user():
-    conn = pymysql.connect(host='localhost', port=3306, user='chiloutus', passwd='gaz360', db='obdreader')
+    conn = pymysql.connect(host='mysql.server', port=3306, user='chiloutus', passwd='gaz360', db='obdreader')
 
     cur = conn.cursor()
 
