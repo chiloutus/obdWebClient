@@ -61,7 +61,7 @@ def vehicleData():
 
     cur = conn.cursor()
     i = session['OwnerId']
-    sql = "SELECT * FROM Car WHERE OwnerId = {}".format(id)
+    sql = "SELECT * FROM Car WHERE OwnerId = \" "+ i + "\""
 
     if cur.execute(sql) != 0:
         result = list(cur.fetchall())
