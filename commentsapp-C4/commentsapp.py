@@ -131,14 +131,23 @@ def registering():
     conn = pymysql.connect(host='mysql.server', port=3306, user='chiloutus', passwd='gaz360', db='chiloutus$obdreader')
 
     cur = conn.cursor()
-    firstName = request.form.get("firstName")
-    lastName = request.form.get("lastName")
+    username = request.form.get("username")
+    name = request.form.get("name")
     email = request.form.get("email")
     passWord = md5((request.form.get("pass1")))
 
+    #check if the username is already in the database
+    sql = "SELECT Username FROM Owner WHERE Username =" + username
 
-    sql = "SELECT OwnerId FROM Owner"
     try:
+        cur.execute(sql)
+        row = cur.fetchall()
+        if row is not None:
+            return render_template('register.html',home_url = url_for('webApp'),
+                                   messages= "This username has already been taken, please try again ")
+
+
+        sql = "SELECT OwnerId FROM Owner"
         cur.execute(sql)
         row = cur.fetchone()
         id = 0
