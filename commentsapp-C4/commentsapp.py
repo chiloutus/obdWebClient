@@ -61,6 +61,7 @@ def vehicleData():
 
     cur = conn.cursor()
     id = str(session['OwnerId'])
+    print(id)
     sql = "SELECT * FROM Car WHERE OwnerId = {}".format(id)
 
     if cur.execute(sql) != 0:
