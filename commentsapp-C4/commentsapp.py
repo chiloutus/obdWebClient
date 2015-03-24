@@ -138,7 +138,7 @@ def registering():
     address = request.form.get("address")
 
     #check if the username is already in the database
-    sql = "SELECT Username FROM Owner WHERE Username =" + username
+    sql = "SELECT Username FROM Owner WHERE Username = \"" + username + "\""
 
     try:
         cur.execute(sql)
