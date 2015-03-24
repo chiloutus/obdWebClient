@@ -31,7 +31,7 @@ def login():
 
     if cur.execute(sql) != 0:
         result = cur.fetchall()
-        session['OwnerId'] = result[0][0]
+        session['OwnerId'] = int(result[0][0])
         return render_template('webApp.html',vehicle_data_url = url_for('vehicleData'),add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
                                sign_out_url=url_for('signOut') )
     else:
