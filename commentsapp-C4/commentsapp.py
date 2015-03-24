@@ -102,7 +102,7 @@ def ownerData():
 
     cur = conn.cursor()
 
-    sql ="SELECT * FROM Journey Inner Join  WHERE OwnerId = \""  + str(session['OwnerId']) + "\""
+    sql ="SELECT * FROM Journey Inner Join  WHERE OwnerId = "  + session['OwnerId']
 
     if cur.execute(sql) != 0:
         result = list(cur.fetchall())
