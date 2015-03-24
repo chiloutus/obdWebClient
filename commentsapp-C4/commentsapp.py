@@ -142,8 +142,8 @@ def registering():
 
     try:
         cur.execute(sql)
-        row = cur.fetchone()
-        if row is not None:
+        res = cur.rowcount()
+        if res != 0:
             return render_template('register.html',home_url = url_for('webApp'),
                                    messages= "This username has already been taken, please try again ")
 
