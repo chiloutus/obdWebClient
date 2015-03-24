@@ -60,7 +60,8 @@ def vehicleData():
     conn = pymysql.connect(host='mysql.server', port=3306, user='chiloutus', passwd='gaz360', db='chiloutus$obdreader')
 
     cur = conn.cursor()
-    id = str(session['OwnerId'])
+    i = session['OwnerId']
+    id = str(i)
     print(id)
     sql = "SELECT * FROM Car WHERE OwnerId = {}".format(id)
 
