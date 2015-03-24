@@ -61,7 +61,7 @@ def vehicleData():
 
     cur = conn.cursor()
 
-    sql ="SELECT * FROM Car WHERE OwnerId = "  + str(session['OwnerId'])
+    sql ="SELECT * FROM Car WHERE OwnerId = \""  + str(session['OwnerId']) + "\""
 
     if cur.execute(sql) != 0:
         result = list(cur.fetchall())
@@ -131,7 +131,7 @@ def addingVehicle():
     make = request.form.get("Make")
     model = request.form.get("Model")
 
-    sql = "INSERT INTO Car (`registration`, `OwnerId`, `make`, `model`) VALUES ('{0}','{1}','{2}','{3}')".format(registration,session['OwnerId'],make,model)
+    sql = "INSERT INTO Car (`registration`, `OwnerId`, `make`, `model`) VALUES ('{0}','{1}','{2}','{3}')".format(registration,str(session['OwnerId']),make,model)
     print(sql)
     try:
         cur.execute(sql)
