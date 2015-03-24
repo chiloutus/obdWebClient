@@ -158,7 +158,7 @@ def registering():
             row = cur.fetchone()
 
         id += 1
-        sql = "INSERT INTO Owner (OwnerId,Username,Password,Address,Email,Name) VALUES ('{0}','{1}','{2}','{3}','{4}')"\
+        sql = "INSERT INTO Owner (OwnerId,Username,Password,Address,Email,Name) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}')"\
             .format(id,username,passWord,address,email,name)
 
         cur.execute(sql)
