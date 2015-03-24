@@ -61,7 +61,7 @@ def vehicleData():
 
     cur = conn.cursor()
 
-    sql ="SELECT * FROM Car WHERE OwnerId = "  + session['OwnerId']
+    sql ="SELECT * FROM Car WHERE OwnerId = "  + str(session['OwnerId'])
 
     if cur.execute(sql) != 0:
         result = list(cur.fetchall())
@@ -91,7 +91,26 @@ def ownerData():
         error = "An error has occured retrieving your account."
         return render_template('webApp.html',vehicle_data_url = url_for('vehicleData'),add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
                                sign_out_url=url_for('signOut'),messages = error )
+@app.route('/journeyData')
+def ownerData():
+    if(session['OwnerId'] == None):
+        return render_template("home.html",
+                               the_title="Welcome to the Word Game, where all the fun is at.",
+                               login_url=url_for("loginscreen"),)
 
+    conn = pymysql.connect(host='mysql.server', port=3306, user='chiloutus', passwd='gaz360', db='chiloutus$obdreader')
+
+    cur = conn.cursor()
+
+    sql ="SELECT * FROM Journey Inner Join  WHERE OwnerId = \""  + str(session['OwnerId']) + "\""
+
+    if cur.execute(sql) != 0:
+        result = list(cur.fetchall())
+        return render_template('ownerData.html',result = result,home_url = url_for('webApp'))
+    else:
+        error = "An error has occured retrieving your account."
+        return render_template('webApp.html',vehicle_data_url = url_for('vehicleData'),add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
+                               sign_out_url=url_for('signOut'),messages = error )
 @app.route('/addVehicle')
 def addVehicle():
     if(session['OwnerId'] == None):
