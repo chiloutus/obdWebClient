@@ -155,10 +155,11 @@ def registering():
         conn.commit()
         update = "Your account was created succesfully"
         return render_template("login.html",register_url=url_for('register'))
-    except:
+    except Exception, err:
+
         conn.rollback()
         error = "There was an error adding your account to the database, please contact customer support"
-        return render_template('register.html',home_url = url_for('webApp'),messages=error)
+        return render_template('register.html',home_url = url_for('webApp'),messages= traceback.format_exc())
 
 
 @app.route('/new/user', methods=['POST'])
