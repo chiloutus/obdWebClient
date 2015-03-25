@@ -92,26 +92,6 @@ def ownerData():
         error = "An error has occured retrieving your account."
         return render_template('webApp.html',vehicle_data_url = url_for('vehicleData'),add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
                                sign_out_url=url_for('signOut'), messages=error)
-@app.route('/journeyData')
-def journeyData():
-    if session['OwnerId'] is None:
-        return render_template("home.html",
-                               the_title="Welcome to the OBD Reader, where all the fun is at.",
-                               login_url=url_for("loginscreen"),)
-    reg = request.args.get('reg')
-    conn = pymysql.connect(host='mysql.server', port=3306, user='chiloutus', passwd='gaz360', db='chiloutus$obdreader')
-
-    cur = conn.cursor()
-    id = session['OwnerId']
-    sql = "SELECT * FROM Journey WHERE OwnerId = {} AND Registration = \"{}\" ".format(id,reg)
-
-    if cur.execute(sql) != 0:
-        result = list(cur.fetchall())
-        return render_template('ownerData.html',result = result,home_url = url_for('webApp'))
-    else:
-        error = "An error has occured retrieving your account."
-        return render_template('webApp.html',vehicle_data_url = url_for('vehicleData'),add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
-                               sign_out_url=url_for('signOut'), messages=error)
 @app.route('/addVehicle')
 def addVehicle():
     if session['OwnerId'] is None:
@@ -120,13 +100,41 @@ def addVehicle():
                                login_url=url_for("loginscreen"),)
     return render_template('addVehicle.html',home_url= url_for('webApp'))
 @app.route('/getJourney')
-def getJourney:
+def getJourney():
     if session['OwnerId'] is None:
         return render_template("home.html",
                                the_title="Welcome to the OBD Reader, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
-
+    conn = pymysql.connect(host='mysql.server', port=3306, user='chiloutus', passwd='gaz360', db='chiloutus$obdreader')
+    cur = conn.cursor()
     reg = request.args.get('reg')
+    sql = "SELECT * FROM Journey WHERE Registration = \"{}\"".format(reg)
+    if cur.execute(sql) != 0:
+        result = list(cur.fetchall())
+        return render_template('getJourney.html',result = result,home_url = url_for('webApp'))
+    else:
+        conn.rollback()
+        error = "Sorry, we could not find any Journey data for that car"
+        return render_template('webApp.html', messages = error,home_url=url_for('webApp'), vehicle_data_url = url_for('vehicleData'),
+                               add_vehicle_url=url_for('addVehicle'),timestamp_url=url_for('getTimeStamp'))
+@app.route('/getTimeStamp')
+def getTimestamp():
+    if session['OwnerId'] is None:
+        return render_template("home.html",
+                               the_title="Welcome to the OBD Reader, where all the fun is at.",
+                               login_url=url_for("loginscreen"))
+    conn = pymysql.connect(host='mysql.server', port=3306, user='chiloutus', passwd='gaz360', db='chiloutus$obdreader')
+    cur = conn.cursor()
+    id = request.args.get('id')
+    sql = "SELECT * FROM Timestamp WHERE idJourney = \"{}\"".format(id)
+    if cur.execute(sql) != 0:
+        result = list(cur.fetchall())
+        return render_template('getJourney.html',result = result,home_url = url_for('webApp'))
+    else:
+        conn.rollback()
+        error = "Sorry, we could not find any Journey data for that car"
+        return render_template('webApp.html', messages = error,home_url=url_for('webApp'), vehicle_data_url = url_for('vehicleData'),
+                               add_vehicle_url=url_for('addVehicle'))
 
 
 @app.route('/addingVehicle', methods=['POST'])
