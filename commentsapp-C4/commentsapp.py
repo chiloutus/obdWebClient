@@ -116,7 +116,7 @@ def getJourney():
         conn.rollback()
         error = "Sorry, we could not find any Journey data for that car"
         return render_template('webApp.html', messages = error,home_url=url_for('webApp'), vehicle_data_url = url_for('vehicleData'),
-                               add_vehicle_url=url_for('addVehicle'),timestamp_url=url_for('getTimeStamp'))
+                               add_vehicle_url=url_for('addVehicle'))
 @app.route('/getTimeStamp')
 def getTimestamp():
     if session['OwnerId'] is None:
