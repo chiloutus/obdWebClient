@@ -44,7 +44,7 @@ def login():
 def webApp():
     if session['OwnerId'] is None:
         return render_template("home.html",
-                               the_title="Welcome to the Word Game, where all the fun is at.",
+                               the_title="Welcome to the OBD Reader, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
 
     return render_template('webApp.html',vehicle_data_url = url_for('vehicleData'),add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
@@ -54,7 +54,7 @@ def webApp():
 def vehicleData():
     if session['OwnerId'] is None:
         return render_template("home.html",
-                               the_title="Welcome to the Word Game, where all the fun is at.",
+                               the_title="Welcome to the OBD Reader, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
 
     conn = pymysql.connect(host='mysql.server', port=3306, user='chiloutus', passwd='gaz360', db='chiloutus$obdreader')
@@ -75,7 +75,7 @@ def vehicleData():
 def ownerData():
     if session['OwnerId'] is None:
         return render_template("home.html",
-                               the_title="Welcome to the Word Game, where all the fun is at.",
+                               the_title="Welcome to the OBD Reader, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
 
     conn = pymysql.connect(host='mysql.server', port=3306, user='chiloutus', passwd='gaz360', db='chiloutus$obdreader')
@@ -96,14 +96,14 @@ def ownerData():
 def journeyData():
     if session['OwnerId'] is None:
         return render_template("home.html",
-                               the_title="Welcome to the Word Game, where all the fun is at.",
+                               the_title="Welcome to the OBD Reader, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
-
+    reg = request.args.get('reg')
     conn = pymysql.connect(host='mysql.server', port=3306, user='chiloutus', passwd='gaz360', db='chiloutus$obdreader')
 
     cur = conn.cursor()
-
-    sql = "SELECT * FROM Journey Inner Join  WHERE OwnerId = " + session['OwnerId']
+    id = session['OwnerId']
+    sql = "SELECT * FROM Journey WHERE OwnerId = {} AND Registration = \"{}\" ".format(id,reg)
 
     if cur.execute(sql) != 0:
         result = list(cur.fetchall())
@@ -111,19 +111,29 @@ def journeyData():
     else:
         error = "An error has occured retrieving your account."
         return render_template('webApp.html',vehicle_data_url = url_for('vehicleData'),add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
-                               sign_out_url=url_for('signOut'),messages = error )
+                               sign_out_url=url_for('signOut'), messages=error)
 @app.route('/addVehicle')
 def addVehicle():
     if session['OwnerId'] is None:
         return render_template("home.html",
-                               the_title="Welcome to the Word Game, where all the fun is at.",
+                               the_title="Welcome to the OBD Reader, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
     return render_template('addVehicle.html',home_url= url_for('webApp'))
+@app.route('/getJourney')
+def getJourney:
+    if session['OwnerId'] is None:
+        return render_template("home.html",
+                               the_title="Welcome to the OBD Reader, where all the fun is at.",
+                               login_url=url_for("loginscreen"),)
+
+    reg = request.args.get('reg')
+
+
 @app.route('/addingVehicle', methods=['POST'])
 def addingVehicle():
     if session['OwnerId'] is None:
         return render_template("home.html",
-                               the_title="Welcome to the Word Game, where all the fun is at.",
+                               the_title="Welcome to the OBD Reader, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
     conn = pymysql.connect(host='mysql.server', port=3306, user='chiloutus', passwd='gaz360', db='chiloutus$obdreader')
 
@@ -244,7 +254,7 @@ def signOut():
     session['OwnerId'] = None
 
     return render_template("home.html",
-                           the_title="Welcome to the Word Game, where all the fun is at.",
+                           the_title="Welcome to the OBD Reader, where all the fun is at.",
                            login_url=url_for("loginscreen"))
 app.config['SECRET_KEY'] = 'This is a secret key'
 if __name__== "__main__":
