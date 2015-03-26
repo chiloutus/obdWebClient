@@ -88,7 +88,7 @@ def ownerData():
     cur = conn.cursor()
     id = session['username']
     print(id)
-    sql = "SELECT Username,Name,Address,Email FROM Owner WHERE OwnerId = {}".format(id)
+    sql = "SELECT Username,Name,Address,Email FROM Owner WHERE Username = {}".format(id)
 
     if cur.execute(sql) != 0:
         result = list(cur.fetchall())

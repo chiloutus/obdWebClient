@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3735031b-df46-4547-9753-d46c02373294" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/addVehicle.html" afterPath="$PROJECT_DIR$/templates/addVehicle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/comments.css" afterPath="$PROJECT_DIR$/static/comments.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commentsapp.py" afterPath="$PROJECT_DIR$/commentsapp.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/getJourney.html" afterPath="$PROJECT_DIR$/templates/getJourney.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/getTimestamp.html" afterPath="$PROJECT_DIR$/templates/getTimestamp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/ownerData.html" afterPath="$PROJECT_DIR$/templates/ownerData.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/register.html" afterPath="$PROJECT_DIR$/templates/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/vehicleData.html" afterPath="$PROJECT_DIR$/templates/vehicleData.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/webApp.html" afterPath="$PROJECT_DIR$/templates/webApp.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OBDReader.iws" />
@@ -44,8 +36,8 @@
       <file leaf-file-name="commentsapp.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/commentsapp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6" vertical-offset="108" max-vertical-offset="6570">
-              <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.41645244" vertical-offset="1458" max-vertical-offset="6570">
+              <caret line="90" column="71" selection-start-line="90" selection-start-column="71" selection-end-line="90" selection-end-column="71" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -961,7 +953,7 @@
       <workItem from="1427365064394" duration="5256000" />
       <workItem from="1427374041086" duration="6786000" />
       <workItem from="1427391623347" duration="2860000" />
-      <workItem from="1427396188832" duration="914000" />
+      <workItem from="1427396188832" duration="1148000" />
     </task>
     <task id="LOCAL-00001" summary="Adding support for viewing data about the currently logged in user.">
       <created>1427209645618</created>
@@ -1233,11 +1225,17 @@
       <option name="project" value="LOCAL" />
       <updated>1427393724854</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="-The app now launches directly into login or the webApp depending if the user is logged in&#10;&#10;-Updated CSS">
+      <created>1427397198463</created>
+      <option name="number" value="00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1427397198463</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87565000" />
+    <option name="totallyTimeSpent" value="87799000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
@@ -1289,7 +1287,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Adding traceback" />
     <MESSAGE value="Adding support for usernames" />
     <MESSAGE value="Adding support for addresses" />
     <MESSAGE value="Fixing the fix, oh python" />
@@ -1314,7 +1311,8 @@
     <MESSAGE value="-Removing unnecesary files&#10;&#10;-Adding better CSS&#10;&#10;-Fixing support for JSON&#10;&#10;-Removing duplicate code&#10;&#10;" />
     <MESSAGE value="-Removing unnecesary files&#10;&#10;-Adding better CSS&#10;&#10;-Fixing support for JSON&#10;&#10;-Removing duplicate code&#10;&#10;-Adding files" />
     <MESSAGE value="-Added support for uploading timestamps." />
-    <option name="LAST_COMMIT_MESSAGE" value="-Added support for uploading timestamps." />
+    <MESSAGE value="-The app now launches directly into login or the webApp depending if the user is logged in&#10;&#10;-Updated CSS" />
+    <option name="LAST_COMMIT_MESSAGE" value="-The app now launches directly into login or the webApp depending if the user is logged in&#10;&#10;-Updated CSS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1599,8 +1597,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/commentsapp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6" vertical-offset="108" max-vertical-offset="6570">
-          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.41645244" vertical-offset="1458" max-vertical-offset="6570">
+          <caret line="90" column="71" selection-start-line="90" selection-start-column="71" selection-end-line="90" selection-end-column="71" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
