@@ -11,10 +11,14 @@ def connectToDB():
     return pymysql.connect(host='localhost', port=3306, user='root', passwd='gaz360', db='obdreader')
 @app.route('/')
 def display_home():
-    return render_template("home.html",
-                           the_title="Welcome to the OBD Reader application",
-                           login_url=url_for("loginscreen"),
-                           working_dir= os.getcwd())
+    try:
+        if session['username'] is None:
+            return render_template("loginscreen.html")
+        else:
+            return render_template('webApp.html',vehicle_data_url = url_for('vehicleData'),add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
+                                 sign_out_url=url_for('signOut'),user=session['username'] )
+    except:
+        return render_template("login.html")
 
 @app.route('/loginscreen')
 def loginscreen():
@@ -27,12 +31,12 @@ def login():
 
     cur = conn.cursor()
 
-    sql ="SELECT * FROM Owner WHERE email = \"" + request.form['Email'] + "\" AND password = \""+ md5(request.form['Password']) + "\""
+    sql ="SELECT Username FROM Owner WHERE email = \"" + request.form['Email'] + "\" AND password = \""+ md5(request.form['Password']) + "\""
 
 
     if cur.execute(sql) != 0:
         result = cur.fetchall()
-        session['OwnerId'] = str(result[0][0])
+        session['username'] = str(result[0][0])
         return render_template('webApp.html',vehicle_data_url = url_for('vehicleData'),add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
                                sign_out_url=url_for('signOut') )
     else:
@@ -43,7 +47,7 @@ def login():
 
 @app.route('/webApp')
 def webApp():
-    if session['OwnerId'] is None:
+    if session['username'] is None:
         return render_template("home.html",
                                the_title="Welcome to the OBD Reader, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
@@ -53,7 +57,7 @@ def webApp():
 
 @app.route('/vehicleData')
 def vehicleData():
-    if session['OwnerId'] is None:
+    if session['username'] is None:
         return render_template("home.html",
                                the_title="Welcome to the OBD Reader, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
@@ -61,7 +65,7 @@ def vehicleData():
     conn = connectToDB()
 
     cur = conn.cursor()
-    i = session['OwnerId']
+    i = session['username']
     sql = "SELECT * FROM Car WHERE OwnerId = \" "+ i + "\""
 
     if cur.execute(sql) != 0:
@@ -74,7 +78,7 @@ def vehicleData():
 
 @app.route('/ownerData')
 def ownerData():
-    if session['OwnerId'] is None:
+    if session['username'] is None:
         return render_template("home.html",
                                the_title="Welcome to the OBD Reader, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
@@ -82,7 +86,7 @@ def ownerData():
     conn = connectToDB()
 
     cur = conn.cursor()
-    id = session['OwnerId']
+    id = session['username']
     print(id)
     sql = "SELECT Username,Name,Address,Email FROM Owner WHERE OwnerId = {}".format(id)
 
@@ -95,14 +99,14 @@ def ownerData():
                                sign_out_url=url_for('signOut'), messages=error)
 @app.route('/addVehicle')
 def addVehicle():
-    if session['OwnerId'] is None:
+    if session['username'] is None:
         return render_template("home.html",
                                the_title="Welcome to the OBD Reader, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
     return render_template('addVehicle.html',home_url= url_for('webApp'))
 @app.route('/getJourney')
 def getJourney():
-    if session['OwnerId'] is None:
+    if session['username'] is None:
         return render_template("home.html",
                                the_title="Welcome to the OBD Reader, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
@@ -120,7 +124,7 @@ def getJourney():
                                add_vehicle_url=url_for('addVehicle'))
 @app.route('/getTimeStamp')
 def getTimestamp():
-    if session['OwnerId'] is None:
+    if session['username'] is None:
         return render_template("home.html",
                                the_title="Welcome to the OBD Reader, where all the fun is at.",
                                login_url=url_for("loginscreen"))
@@ -140,7 +144,7 @@ def getTimestamp():
 
 @app.route('/addingVehicle', methods=['POST'])
 def addingVehicle():
-    if session['OwnerId'] is None:
+    if session['username'] is None:
         return render_template("home.html",
                                the_title="Welcome to the OBD Reader, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
@@ -152,7 +156,7 @@ def addingVehicle():
     model = request.form.get("Model")
     ftype = request.form.get("FType")
 
-    sql = "INSERT INTO Car (registration, OwnerId, Make, Model, FuelType) VALUES ('{0}','{1}','{2}','{3}','{4}')".format(registration, str(session['OwnerId']), make, model, ftype)
+    sql = "INSERT INTO Car (registration, OwnerId, Make, Model, FuelType) VALUES ('{0}','{1}','{2}','{3}','{4}')".format(registration, str(session['username']), make, model, ftype)
     print(sql)
     try:
         cur.execute(sql)
@@ -344,11 +348,12 @@ def new_timestamp():
 
 @app.route('/signOut')
 def signOut():
-    session['OwnerId'] = None
+    session['username'] = None
 
     return render_template("home.html",
                            the_title="Welcome to the OBD Reader, where all the fun is at.",
                            login_url=url_for("loginscreen"))
 app.config['SECRET_KEY'] = 'This is a secret key'
+app.config['username'] = None
 if __name__== "__main__":
     app.run(host='0.0.0.0',debug=True)

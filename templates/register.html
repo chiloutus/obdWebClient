@@ -38,6 +38,7 @@
         }
 
     </script>
+    <div id="header">
     <head>Enter your registration details</head>
     <form method="post" action="registering">
         <br><br>
@@ -62,4 +63,5 @@
         <input type="submit" id="submitButton" onsubmit="checkPass()">
     </form>
     <li>{{ messages if messages != None }}</li>
+    </div>
 {% endblock %}

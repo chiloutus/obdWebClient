@@ -85,6 +85,10 @@ footer {
   padding: 20px 0;
   font: 12px arial, sans-serif;
 }
+#header h2{
+  margin-right: 30px;
+  font: 12px arial, sans-serif;
+}
 #body {
 
 }
