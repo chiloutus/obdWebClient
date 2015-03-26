@@ -4,21 +4,6 @@
 {% block the_body %}
 <style>
 
-    #header {
-        padding-top:10px;
-        border-top:7px solid #505559;
-        border-bottom:7px solid #505559;
-        margin:0 auto;
-        width:970px;
-        background: #eee;
-        height: 150px;
-        padding: 20px 0;
-        font: 12px arial, sans-serif;
-    }
-    #body {
-
-    }
-
     #header form {
         margin-right: 30px;
         height: 40px;
@@ -35,8 +20,8 @@
         <h1>Login</h1>
         <a href={{ register_url }}>Register</a>
         <form method="post" action="login">
-            <label>Email <input type="text" name="Email" id="s-user"></label><br>
-            <label>Password<input type="text" name="Password" id="s-pass"></label>
+            <label>Username <input type="text" name="Username" ></label><br>
+            <label>Password<input type="text" name="Password" ></label>
             <input type="submit" class="submit" value="Submit">
         </form>
         <li>{{ messages if messages != None }}</li>

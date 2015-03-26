@@ -15,8 +15,9 @@ def display_home():
         if session['username'] is None:
             return render_template("loginscreen.html")
         else:
-            return render_template('webApp.html',vehicle_data_url = url_for('vehicleData'),add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
-                                 sign_out_url=url_for('signOut'),user=session['username'] )
+            return render_template('webApp.html', vehicle_data_url=url_for('vehicleData'),
+                                   add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
+                                   sign_out_url=url_for('signOut'), user=session['username'])
     except:
         return render_template("login.html",register_url=url_for('register'))
 
@@ -31,14 +32,15 @@ def login():
 
     cur = conn.cursor()
 
-    sql ="SELECT Username FROM Owner WHERE email = \"" + request.form['Email'] + "\" AND password = \""+ md5(request.form['Password']) + "\""
+    sql ="SELECT Username FROM Owner WHERE Username = \"" + request.form['Username'] + "\" AND password = \""+ md5(request.form['Password']) + "\""
 
 
     if cur.execute(sql) != 0:
         result = cur.fetchall()
         session['username'] = str(result[0][0])
-        return render_template('webApp.html',vehicle_data_url = url_for('vehicleData'),add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
-                               sign_out_url=url_for('signOut') )
+        return render_template('webApp.html', vehicle_data_url=url_for('vehicleData'),
+                               add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
+                               sign_out_url=url_for('signOut'), user=session['username'])
     else:
         error = "Invalid credentials"
         return render_template('login.html',
@@ -52,8 +54,9 @@ def webApp():
                                the_title="Welcome to the OBD Reader, where all the fun is at.",
                                login_url=url_for("loginscreen"),)
 
-    return render_template('webApp.html',vehicle_data_url = url_for('vehicleData'),add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
-                               sign_out_url=url_for('signOut') )
+    return render_template('webApp.html', vehicle_data_url=url_for('vehicleData'),
+                               add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
+                               sign_out_url=url_for('signOut'), user=session['username'])
 
 @app.route('/vehicleData')
 def vehicleData():
@@ -73,8 +76,9 @@ def vehicleData():
         return render_template('vehicleData.html',result = result,home_url = url_for('webApp'))
     else:
         error = "There is no record of your vehicle, consider adding one."
-        return render_template('webApp.html',vehicle_data_url = url_for('vehicleData'),add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
-                               sign_out_url=url_for('signOut'),messages = error )
+        return render_template('webApp.html', vehicle_data_url=url_for('vehicleData'),
+                               add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
+                               sign_out_url=url_for('signOut'), user=session['username'],messages=error)
 
 @app.route('/ownerData')
 def ownerData():
@@ -88,15 +92,16 @@ def ownerData():
     cur = conn.cursor()
     id = session['username']
     print(id)
-    sql = "SELECT Username,Name,Address,Email FROM Owner WHERE Username = {}".format(id)
+    sql = "SELECT Username,Name,Address,Email FROM Owner WHERE Username = \"{}\"".format(id)
 
     if cur.execute(sql) != 0:
         result = list(cur.fetchall())
-        return render_template('ownerData.html',result = result,home_url = url_for('webApp'))
+        return render_template('ownerData.html', result=result, home_url=url_for('webApp'))
     else:
         error = "An error has occured retrieving your account."
-        return render_template('webApp.html',vehicle_data_url = url_for('vehicleData'),add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
-                               sign_out_url=url_for('signOut'), messages=error)
+        return render_template('webApp.html', vehicle_data_url=url_for('vehicleData'),
+                               add_vehicle_url = url_for('addVehicle'), owner_data_url =url_for('ownerData'),
+                               sign_out_url=url_for('signOut'), user=session['username'],messages=error)
 @app.route('/addVehicle')
 def addVehicle():
     if session['username'] is None:
@@ -120,8 +125,9 @@ def getJourney():
     else:
         conn.rollback()
         error = "Sorry, we could not find any Journey data for that car"
-        return render_template('webApp.html', messages = error,home_url=url_for('webApp'), vehicle_data_url = url_for('vehicleData'),
-                               add_vehicle_url=url_for('addVehicle'))
+        return render_template('webApp.html', vehicle_data_url=url_for('vehicleData'),
+                               add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
+                               sign_out_url=url_for('signOut'), user=session['username'],messages=error)
 @app.route('/getTimeStamp')
 def getTimestamp():
     if session['username'] is None:
@@ -138,8 +144,9 @@ def getTimestamp():
     else:
         conn.rollback()
         error = "Sorry, we could not find any Journey data for that car"
-        return render_template('webApp.html', messages = error,home_url=url_for('webApp'), vehicle_data_url = url_for('vehicleData'),
-                               add_vehicle_url=url_for('addVehicle'))
+        return render_template('webApp.html', vehicle_data_url=url_for('vehicleData'),
+                               add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
+                               sign_out_url=url_for('signOut'), user=session['username'],messages=error)
 
 
 @app.route('/addingVehicle', methods=['POST'])
