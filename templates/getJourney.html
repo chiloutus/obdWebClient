@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+
+
+    <p>
+        Here is the data stored about your vehicles journeys
+    </p>
+
+
+    <table>
+        <th>Journey ID</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Registration</th>
+        {% for i in result %}
+            <tr>
+                <th> {{ i[0] }} </th>
+                <td> {{ i[1] }} </td>
+                <td> {{ i[2] }} </td>
+                <td> {{ i[3] }} </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    Go <a href={{home_url}}>Home</a>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block the_body %}
+    {{ working_dir }}
+    <div id="header">
+        Please select from this list of options:
+        <ul>
+
+            <a href="{{ vehicle_data_url }}"><img src="static/vehicleData.jpg" /></a>
+            <li>Add a vehicle <a href="{{add_vehicle_url}}">here</a>.
+            <li>View Owner Data <a href="{{owner_data_url}}">here</a>.
+
+        </ul>
+        <body>{{ messages if messages != None }}
+        <a href="{{ sign_out_url }}">Sign Out</a></body>
+    </div>
+
+
+{% endblock %}
