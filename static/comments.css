@@ -92,14 +92,3 @@ footer {
 #body {
 
 }
-
-#header form {
-  margin-right: 30px;
-  height: 40px;
-  padding-top: 8px;
-}
-
-#header form label {
-  display: inline-block;
-  margin: 0 2px;
-}

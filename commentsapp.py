@@ -18,7 +18,7 @@ def display_home():
             return render_template('webApp.html',vehicle_data_url = url_for('vehicleData'),add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
                                  sign_out_url=url_for('signOut'),user=session['username'] )
     except:
-        return render_template("login.html")
+        return render_template("login.html",register_url=url_for('register'))
 
 @app.route('/loginscreen')
 def loginscreen():

@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3735031b-df46-4547-9753-d46c02373294" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/addVehicle.html" afterPath="$PROJECT_DIR$/templates/addVehicle.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/comments.css" afterPath="$PROJECT_DIR$/static/comments.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commentsapp.py" afterPath="$PROJECT_DIR$/commentsapp.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/webApp.html" afterPath="$PROJECT_DIR$/templates/webApp.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OBDReader.iws" />
@@ -36,8 +39,8 @@
       <file leaf-file-name="commentsapp.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/commentsapp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41645244" vertical-offset="1458" max-vertical-offset="6570">
-              <caret line="90" column="71" selection-start-line="90" selection-start-column="71" selection-end-line="90" selection-end-column="71" />
+            <state vertical-scroll-proportion="0.59125966" vertical-offset="130" max-vertical-offset="6570">
+              <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -58,8 +61,8 @@
       <file leaf-file-name="addVehicle.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/addVehicle.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.888889" vertical-offset="111" max-vertical-offset="522">
-              <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+            <state vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="378">
+              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -108,8 +111,8 @@
       <file leaf-file-name="comments.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/comments.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1547" max-vertical-offset="1980">
-              <caret line="86" column="1" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1367" max-vertical-offset="1800">
+              <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -128,8 +131,8 @@
       <file leaf-file-name="webApp.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/webApp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="450">
-              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+            <state vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="468">
+              <caret line="9" column="71" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -161,12 +164,12 @@
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/ownerData.html" />
-        <option value="$PROJECT_DIR$/templates/addVehicle.html" />
         <option value="$PROJECT_DIR$/templates/getJourney.html" />
         <option value="$PROJECT_DIR$/templates/getTimestamp.html" />
         <option value="$PROJECT_DIR$/templates/register.html" />
         <option value="$PROJECT_DIR$/templates/vehicleData.html" />
         <option value="$PROJECT_DIR$/templates/webApp.html" />
+        <option value="$PROJECT_DIR$/templates/addVehicle.html" />
         <option value="$PROJECT_DIR$/static/comments.css" />
         <option value="$PROJECT_DIR$/commentsapp.py" />
       </list>
@@ -953,7 +956,7 @@
       <workItem from="1427365064394" duration="5256000" />
       <workItem from="1427374041086" duration="6786000" />
       <workItem from="1427391623347" duration="2860000" />
-      <workItem from="1427396188832" duration="1148000" />
+      <workItem from="1427396188832" duration="2389000" />
     </task>
     <task id="LOCAL-00001" summary="Adding support for viewing data about the currently logged in user.">
       <created>1427209645618</created>
@@ -1231,11 +1234,17 @@
       <option name="project" value="LOCAL" />
       <updated>1427397198463</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="-Fixing bug in sql where the OwnerId was requested instead of the Username">
+      <created>1427397391769</created>
+      <option name="number" value="00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1427397391769</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87799000" />
+    <option name="totallyTimeSpent" value="89040000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
@@ -1287,7 +1296,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Adding support for usernames" />
     <MESSAGE value="Adding support for addresses" />
     <MESSAGE value="Fixing the fix, oh python" />
     <MESSAGE value="I can't count to 6" />
@@ -1312,7 +1320,8 @@
     <MESSAGE value="-Removing unnecesary files&#10;&#10;-Adding better CSS&#10;&#10;-Fixing support for JSON&#10;&#10;-Removing duplicate code&#10;&#10;-Adding files" />
     <MESSAGE value="-Added support for uploading timestamps." />
     <MESSAGE value="-The app now launches directly into login or the webApp depending if the user is logged in&#10;&#10;-Updated CSS" />
-    <option name="LAST_COMMIT_MESSAGE" value="-The app now launches directly into login or the webApp depending if the user is logged in&#10;&#10;-Updated CSS" />
+    <MESSAGE value="-Fixing bug in sql where the OwnerId was requested instead of the Username" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Fixing bug in sql where the OwnerId was requested instead of the Username" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1531,14 +1540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/addVehicle.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.888889" vertical-offset="111" max-vertical-offset="522">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/getJourney.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.37037" vertical-offset="188" max-vertical-offset="612">
@@ -1551,14 +1552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.37037" vertical-offset="224" max-vertical-offset="648">
           <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.37037" vertical-offset="890" max-vertical-offset="1314">
-          <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -1581,24 +1574,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/webApp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="450">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        <state vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="468">
+          <caret line="9" column="71" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/addVehicle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="378">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/comments.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1547" max-vertical-offset="1980">
-          <caret line="86" column="1" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1367" max-vertical-offset="1800">
+          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.37037" vertical-offset="890" max-vertical-offset="1314">
+          <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/commentsapp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41645244" vertical-offset="1458" max-vertical-offset="6570">
-          <caret line="90" column="71" selection-start-line="90" selection-start-column="71" selection-end-line="90" selection-end-column="71" />
+        <state vertical-scroll-proportion="0.59125966" vertical-offset="130" max-vertical-offset="6570">
+          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
