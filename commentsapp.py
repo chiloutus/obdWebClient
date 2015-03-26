@@ -297,6 +297,50 @@ def new_journey():
 
     else:
         return "Error"
+@app.route('/new/timestamp', methods=['POST'])
+def new_timestamp():
+    conn = connectToDB()
+
+    cur = conn.cursor()
+
+    if request.method == 'POST':
+        if request.headers['Content-Type'] == 'application/json':
+            try:
+                #unpack JSON
+                # Parse the JSON
+                raw_obj = request.get_json()
+                obj = json.loads(raw_obj)
+                #get current time
+                curTime = time.strftime("%c")
+                GPSCoords = obj['GPSCoords']
+                FuelLvl = obj['FuelLvl']
+                FuelCsmt = obj['FuelCsmt']
+                RPM = obj['RPM']
+                Temp = obj['Temp']
+                Trblcode = obj['Trblecode']
+                idJourney = obj['idJourney']
+
+
+                #sql = "INSERT INTO TimeStamp (GPSCoords,Fuel Level,Fuel Consumption,RPM,Temperature,Trouble Code,time,idJourney)" \
+                #      " VALUES ('{0}','{1}','{2}'',{3}','{4}','{5}','{6}','{7}')" .format(GPSCoords,FuelLvl,FuelCsmt,RPM,Temp,Trblcode,curTime,idJourney)
+
+                sql = "INSERT INTO `Timestamp` (`GPSCoords`, `Fuel Level`, `Fuel Consumption`, `RPM`, `Temperature`, `Trouble Code`, `time`, `idJourney`) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')"\
+                    .format(GPSCoords,FuelLvl,FuelCsmt,RPM,Temp,Trblcode,curTime,idJourney)
+
+                print(sql)
+                cur.execute(sql)
+
+                conn.commit()
+
+                return "Success"
+            except Exception as e:
+                #do something
+                print("error")
+                print(traceback.format_exc())
+                return "Error, bad one"
+
+    else:
+        return "Error"
 
 @app.route('/signOut')
 def signOut():
