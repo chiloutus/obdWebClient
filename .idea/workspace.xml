@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3735031b-df46-4547-9753-d46c02373294" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/addVehicle.html" afterPath="$PROJECT_DIR$/templates/addVehicle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/comments.css" afterPath="$PROJECT_DIR$/static/comments.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commentsapp.py" afterPath="$PROJECT_DIR$/commentsapp.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/webApp.html" afterPath="$PROJECT_DIR$/templates/webApp.html" />
+    <list default="true" id="3735031b-df46-4547-9753-d46c02373294" name="Default" comment="-Fixing some CSS not being properly displayed&#10;&#10;-Fixing some issues with JINJA2 variables not being passed under some conditions&#10;&#10;-General cleaning up of code">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/newVehicle.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OBDReader.iws" />
@@ -36,10 +33,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="commentsapp.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="commentsapp.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commentsapp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.59125966" vertical-offset="130" max-vertical-offset="6570">
+            <state vertical-scroll-proportion="-7.419355" vertical-offset="130" max-vertical-offset="6570">
               <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -108,10 +105,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comments.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="comments.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/comments.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1367" max-vertical-offset="1800">
+            <state vertical-scroll-proportion="0.7505774" vertical-offset="1367" max-vertical-offset="1800">
               <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
               <folding />
             </state>
@@ -956,7 +953,7 @@
       <workItem from="1427365064394" duration="5256000" />
       <workItem from="1427374041086" duration="6786000" />
       <workItem from="1427391623347" duration="2860000" />
-      <workItem from="1427396188832" duration="2389000" />
+      <workItem from="1427396188832" duration="2631000" />
     </task>
     <task id="LOCAL-00001" summary="Adding support for viewing data about the currently logged in user.">
       <created>1427209645618</created>
@@ -1240,11 +1237,17 @@
       <option name="project" value="LOCAL" />
       <updated>1427397391769</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="-Fixing some CSS not being properly displayed&#10;&#10;-Fixing some issues with JINJA2 variables not being passed under some conditions&#10;&#10;-General cleaning up of code">
+      <created>1427398648866</created>
+      <option name="number" value="00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1427398648866</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89040000" />
+    <option name="totallyTimeSpent" value="89282000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
@@ -1270,7 +1273,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25681818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25681818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28549382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32906976" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1296,7 +1299,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Adding support for addresses" />
     <MESSAGE value="Fixing the fix, oh python" />
     <MESSAGE value="I can't count to 6" />
     <MESSAGE value="Adding support for the view owner data page" />
@@ -1321,7 +1323,8 @@
     <MESSAGE value="-Added support for uploading timestamps." />
     <MESSAGE value="-The app now launches directly into login or the webApp depending if the user is logged in&#10;&#10;-Updated CSS" />
     <MESSAGE value="-Fixing bug in sql where the OwnerId was requested instead of the Username" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Fixing bug in sql where the OwnerId was requested instead of the Username" />
+    <MESSAGE value="-Fixing some CSS not being properly displayed&#10;&#10;-Fixing some issues with JINJA2 variables not being passed under some conditions&#10;&#10;-General cleaning up of code" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Fixing some CSS not being properly displayed&#10;&#10;-Fixing some issues with JINJA2 variables not being passed under some conditions&#10;&#10;-General cleaning up of code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1588,14 +1591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/comments.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1367" max-vertical-offset="1800">
-          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.37037" vertical-offset="890" max-vertical-offset="1314">
@@ -1606,11 +1601,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/commentsapp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59125966" vertical-offset="130" max-vertical-offset="6570">
+        <state vertical-scroll-proportion="-7.419355" vertical-offset="130" max-vertical-offset="6570">
           <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/comments.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7505774" vertical-offset="1367" max-vertical-offset="1800">
+          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
