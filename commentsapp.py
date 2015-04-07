@@ -291,8 +291,6 @@ def new_journey():
                 registration = obj['registration']
 
 
-                print(username,email,passWord,address,name)
-
                 sql = "INSERT INTO Journey (startTime,endTime,Registration) VALUES ('{0}','{1}','{2}')" \
                     .format(curTime,"",registration)
                 cur.execute(sql)
@@ -352,6 +350,48 @@ def new_timestamp():
 
     else:
         return "Error"
+@app.route('/mobile/login', methods=['POST'])
+def mobile_login():
+    conn = connectToDB()
+
+    cur = conn.cursor()
+
+    if request.method == 'POST':
+        if request.headers['Content-Type'] == 'application/json':
+            try:
+                #unpack JSON
+                # Parse the JSON
+                obj = request.get_json()
+                #obj = json.loads(raw_obj)
+                response = {}
+                response['result'] = 'False'
+                json_data = json.dumps(response)
+                username = obj['Username']
+                passwd = obj['Passwd']
+
+                sql = "SELECT * FROM Owner WHERE Username = '{0}' AND Password = '{1}'".format(username,passwd)
+
+
+                print(sql)
+                cur.execute(sql)
+                if cur.rowcount == 0:
+                    response['result'] = 'True'
+                    json_data = json.dumps(response)#
+                    conn.commit()
+                    return json_data
+                else:
+                    json_data = json.dumps(response)#
+                    return json_data
+
+            except Exception as e:
+                #do something
+                response['result'] = 'Error'
+                json_data = json.dumps(response)#
+                conn.commit()
+                return json_data
+
+    else:
+        return "Error"
 
 @app.route('/signOut')
 def signOut():
@@ -363,4 +403,4 @@ def signOut():
 app.config['SECRET_KEY'] = 'This is a secret key'
 app.config['username'] = None
 if __name__== "__main__":
-    app.run(host='10.40.3.50',debug=True)
+    app.run(host='192.168.0.15',debug=True)
