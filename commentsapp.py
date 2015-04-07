@@ -281,11 +281,11 @@ def new_journey():
     if request.method == 'POST':
         if request.headers['Content-Type'] == 'application/json':
             try:
-                row = cur.fetchone()
                 #unpack JSON
                 # Parse the JSON
-                raw_obj = request.get_json()
-                obj = json.loads(raw_obj)
+                obj = request.get_json()
+                #print(raw_obj)
+                #obj = json.loads(raw_obj)
                 #get current time
                 curTime = time.strftime("%c")
                 registration = obj['registration']
@@ -319,8 +319,8 @@ def new_timestamp():
             try:
                 #unpack JSON
                 # Parse the JSON
-                raw_obj = request.get_json()
-                obj = json.loads(raw_obj)
+                obj = request.get_json()
+                #obj = json.loads(raw_obj)
                 #get current time
                 curTime = time.strftime("%c")
                 GPSCoords = obj['GPSCoords']
@@ -363,4 +363,4 @@ def signOut():
 app.config['SECRET_KEY'] = 'This is a secret key'
 app.config['username'] = None
 if __name__== "__main__":
-    app.run(host='0.0.0.0',debug=True)
+    app.run(host='10.40.3.50',debug=True)
