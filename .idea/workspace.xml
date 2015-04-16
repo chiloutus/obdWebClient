@@ -1,10 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3735031b-df46-4547-9753-d46c02373294" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/OBDReader.iml" afterPath="$PROJECT_DIR$/.idea/OBDReader.iml" />
+    <list default="true" id="3735031b-df46-4547-9753-d46c02373294" name="Default" comment="-Fixed a dumb regex bug.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/broken-axis.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/broken-axis.src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/canvas-tools.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/canvas-tools.src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/themes/dark-blue.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/themes/dark-green.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/themes/dark-unica.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/data.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/data.src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/drilldown.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/drilldown.src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/exporting.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/exporting.src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/fuelData.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/funnel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/funnel.src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/themes/gray.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/themes/grid-light.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/themes/grid.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/heatmap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/heatmap.src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/highcharts-3d.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/highcharts-3d.src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/highcharts-more.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/highcharts-more.src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/highcharts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/highcharts.src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/no-data-to-display.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/no-data-to-display.src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/themes/sand-signika.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/themes/skies.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/solid-gauge.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/solid-gauge.src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/adapters/standalone-framework.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/adapters/standalone-framework.src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/treemap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modules/treemap.src.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commentsapp.py" afterPath="$PROJECT_DIR$/commentsapp.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OBDReader.iws" />
@@ -18,7 +53,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/OBDReader$commentsapp__1_.coverage" NAME="commentsapp (1) Coverage Results" MODIFIED="1428439113293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/OBDReader$commentsapp__1_.coverage" NAME="commentsapp (1) Coverage Results" MODIFIED="1429152782604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/OBDReader$commentsapp.coverage" NAME="commentsapp Coverage Results" MODIFIED="1427373062796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commentsapp-C4" />
     <SUITE FILE_PATH="coverage/OBDReader$OBDReader.coverage" NAME="OBDReader Coverage Results" MODIFIED="1423513646826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
@@ -34,36 +69,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="commentsapp.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="commentsapp.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commentsapp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3851132" vertical-offset="6012" max-vertical-offset="6987">
-              <caret line="405" column="30" selection-start-line="405" selection-start-column="30" selection-end-line="405" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="7905">
+              <caret line="122" column="74" selection-start-line="122" selection-start-column="62" selection-end-line="122" selection-end-column="74" />
               <folding>
-                <marker date="1428439112352" expanded="true" signature="1157:1293" placeholder="SELECT Usern..Owner..." />
-                <marker date="1428439112352" expanded="true" signature="2844:2891" placeholder="SELECT * FRO..Car..." />
-                <marker date="1428439112352" expanded="true" signature="3834:3903" placeholder="SELECT Usern..Owner..." />
-                <marker date="1428439112352" expanded="true" signature="5193:5242" placeholder="SELECT * FRO..Journey..." />
-                <marker date="1428439112352" expanded="true" signature="6208:6256" placeholder="SELECT * FRO..Timestamp..." />
-                <marker date="1428439112352" expanded="true" signature="7378:7479" placeholder="INSERT INTO ..." />
-                <marker date="1428439112352" expanded="true" signature="8739:8803" placeholder="SELECT Usern..Owner..." />
-                <marker date="1428439112352" expanded="true" signature="9135:9230" placeholder="INSERT INTO ..." />
-                <marker date="1428439112352" expanded="true" signature="10020:10045" placeholder="SELECT Owner..Owner..." />
-                <marker date="1428439112352" expanded="true" signature="11026:11135" placeholder="INSERT INTO ..." />
-                <marker date="1428439112352" expanded="true" signature="12088:12167" placeholder="INSERT INTO ..." />
-                <marker date="1428439112352" expanded="true" signature="13599:13786" placeholder="INSERT INTO ..." />
-                <marker date="1428439112352" expanded="true" signature="14832:14895" placeholder="SELECT * FRO..Owner..." />
+                <marker date="1429152836408" expanded="true" signature="1251:1387" placeholder="SELECT Usern..Owner..." />
+                <marker date="1429152836408" expanded="true" signature="2938:2985" placeholder="SELECT * FRO..Car..." />
+                <marker date="1429152836408" expanded="true" signature="3989:4094" placeholder="SELECT * FRO..car..." />
+                <marker date="1429152836408" expanded="true" signature="4364:4473" placeholder="SELECT `Fuel..Timestamp..." />
+                <marker date="1429152836408" expanded="true" signature="4656:4751" placeholder="SELECT time ..Timestamp..." />
+                <marker date="1429152836408" expanded="true" signature="6194:6263" placeholder="SELECT Usern..Owner..." />
+                <marker date="1429152836408" expanded="true" signature="7553:7602" placeholder="SELECT * FRO..Journey..." />
+                <marker date="1429152836408" expanded="true" signature="8568:8616" placeholder="SELECT * FRO..Timestamp..." />
+                <marker date="1429152836408" expanded="true" signature="9738:9839" placeholder="INSERT INTO ..." />
+                <marker date="1429152836408" expanded="true" signature="11099:11163" placeholder="SELECT Usern..Owner..." />
+                <marker date="1429152836408" expanded="true" signature="11495:11590" placeholder="INSERT INTO ..." />
+                <marker date="1429152836408" expanded="true" signature="12380:12405" placeholder="SELECT Owner..Owner..." />
+                <marker date="1429152836408" expanded="true" signature="13386:13495" placeholder="INSERT INTO ..." />
+                <marker date="1429152836408" expanded="true" signature="14448:14527" placeholder="INSERT INTO ..." />
+                <marker date="1429152836408" expanded="true" signature="15959:16146" placeholder="INSERT INTO ..." />
+                <marker date="1429152836408" expanded="true" signature="17209:17272" placeholder="SELECT * FRO..Owner..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addVehicle.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/addVehicle.html">
+      <file leaf-file-name="fuelData.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/fuelData.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="357">
-              <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
-              <folding />
+            <state vertical-scroll-proportion="0.335034" vertical-offset="364" max-vertical-offset="1105">
+              <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,7 +111,7 @@
       <file leaf-file-name="getJourney.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/getJourney.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="578">
+            <state vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="578">
               <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
               <folding />
             </state>
@@ -81,7 +121,7 @@
       <file leaf-file-name="getTimestamp.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/getTimestamp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="612">
+            <state vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="612">
               <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
               <folding />
             </state>
@@ -91,7 +131,7 @@
       <file leaf-file-name="register.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="1241">
+            <state vertical-scroll-proportion="-18.384615" vertical-offset="627" max-vertical-offset="1241">
               <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
               <folding />
             </state>
@@ -101,18 +141,18 @@
       <file leaf-file-name="vehicleData.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/vehicleData.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="561">
+            <state vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="561">
               <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <file leaf-file-name="ownerData.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/ownerData.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="663">
-              <caret line="23" column="62" selection-start-line="23" selection-start-column="62" selection-end-line="23" selection-end-column="62" />
+            <state vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="561">
+              <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -121,7 +161,7 @@
       <file leaf-file-name="comments.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/comments.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1496" max-vertical-offset="1700">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1022" max-vertical-offset="1700">
               <caret line="88" column="21" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
               <folding />
             </state>
@@ -131,7 +171,7 @@
       <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="289">
+            <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="289">
               <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
               <folding />
             </state>
@@ -141,7 +181,7 @@
       <file leaf-file-name="webApp.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/webApp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="442">
+            <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="442">
               <caret line="9" column="71" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
               <folding />
             </state>
@@ -162,6 +202,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/commentsapp.py" />
+        <option value="$PROJECT_DIR$/templates/fuelData.html" />
       </list>
     </option>
   </component>
@@ -170,8 +211,6 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="725" />
-    <option name="y" value="17" />
     <option name="width" value="960" />
     <option name="height" value="1080" />
   </component>
@@ -292,6 +331,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -310,9 +350,68 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OBDReader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OBDReader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OBDReader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OBDReader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OBDReader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OBDReader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OBDReader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OBDReader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -328,7 +427,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Carbon" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../PaddysCode" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FullScreen" value="false" />
@@ -344,6 +443,9 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\IdeaProjects\Python\OBDReader" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\IdeaProjects\Python\OBDReader\commentsapp-C4" />
       <recent name="F:\IdeaProjects\Python\OBDReader\commentsapp-C4\templates" />
@@ -867,7 +969,13 @@
       <workItem from="1427451411538" duration="3649000" />
       <workItem from="1428415531930" duration="71000" />
       <workItem from="1428415956889" duration="1770000" />
-      <workItem from="1428425623695" duration="2237000" />
+      <workItem from="1428425623695" duration="2240000" />
+      <workItem from="1428481012442" duration="2760000" />
+      <workItem from="1428511565772" duration="1654000" />
+      <workItem from="1428872936592" duration="5000" />
+      <workItem from="1428874418250" duration="9000" />
+      <workItem from="1429016360446" duration="18000" />
+      <workItem from="1429142924439" duration="8713000" />
     </task>
     <task id="LOCAL-00003" summary="Fixing an issue with an incorrect username being used for the database.">
       <created>1427210151762</created>
@@ -1069,23 +1177,23 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98602000" />
+    <option name="totallyTimeSpent" value="111764000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="725" y="17" width="960" height="1080" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="960" height="1080" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292978" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5895349" sideWeight="0.7191283" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28481013" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28902954" sideWeight="0.16407983" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1096,7 +1204,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25609756" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28481013" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28902954" sideWeight="0.83592016" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32906976" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1161,30 +1269,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="890" max-vertical-offset="1314">
-          <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/vehicleData.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="594">
-          <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="702">
-          <caret line="23" column="62" selection-start-line="23" selection-start-column="62" selection-end-line="23" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/comments.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1296" max-vertical-offset="1800">
@@ -1214,19 +1298,22 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1782" max-vertical-offset="6696">
           <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
           <folding>
-            <marker date="1428439112352" expanded="true" signature="1157:1293" placeholder="SELECT Usern..Owner..." />
-            <marker date="1428439112352" expanded="true" signature="2844:2891" placeholder="SELECT * FRO..Car..." />
-            <marker date="1428439112352" expanded="true" signature="3834:3903" placeholder="SELECT Usern..Owner..." />
-            <marker date="1428439112352" expanded="true" signature="5193:5242" placeholder="SELECT * FRO..Journey..." />
-            <marker date="1428439112352" expanded="true" signature="6208:6256" placeholder="SELECT * FRO..Timestamp..." />
-            <marker date="1428439112352" expanded="true" signature="7378:7479" placeholder="INSERT INTO ..." />
-            <marker date="1428439112352" expanded="true" signature="8739:8803" placeholder="SELECT Usern..Owner..." />
-            <marker date="1428439112352" expanded="true" signature="9135:9230" placeholder="INSERT INTO ..." />
-            <marker date="1428439112352" expanded="true" signature="10020:10045" placeholder="SELECT Owner..Owner..." />
-            <marker date="1428439112352" expanded="true" signature="11026:11135" placeholder="INSERT INTO ..." />
-            <marker date="1428439112352" expanded="true" signature="12088:12167" placeholder="INSERT INTO ..." />
-            <marker date="1428439112352" expanded="true" signature="13599:13786" placeholder="INSERT INTO ..." />
-            <marker date="1428439112352" expanded="true" signature="14832:14895" placeholder="SELECT * FRO..Owner..." />
+            <marker date="1429152836408" expanded="true" signature="1251:1387" placeholder="SELECT Usern..Owner..." />
+            <marker date="1429152836408" expanded="true" signature="2938:2985" placeholder="SELECT * FRO..Car..." />
+            <marker date="1429152836408" expanded="true" signature="3989:4094" placeholder="SELECT * FRO..car..." />
+            <marker date="1429152836408" expanded="true" signature="4364:4473" placeholder="SELECT `Fuel..Timestamp..." />
+            <marker date="1429152836408" expanded="true" signature="4656:4751" placeholder="SELECT time ..Timestamp..." />
+            <marker date="1429152836408" expanded="true" signature="6194:6263" placeholder="SELECT Usern..Owner..." />
+            <marker date="1429152836408" expanded="true" signature="7553:7602" placeholder="SELECT * FRO..Journey..." />
+            <marker date="1429152836408" expanded="true" signature="8568:8616" placeholder="SELECT * FRO..Timestamp..." />
+            <marker date="1429152836408" expanded="true" signature="9738:9839" placeholder="INSERT INTO ..." />
+            <marker date="1429152836408" expanded="true" signature="11099:11163" placeholder="SELECT Usern..Owner..." />
+            <marker date="1429152836408" expanded="true" signature="11495:11590" placeholder="INSERT INTO ..." />
+            <marker date="1429152836408" expanded="true" signature="12380:12405" placeholder="SELECT Owner..Owner..." />
+            <marker date="1429152836408" expanded="true" signature="13386:13495" placeholder="INSERT INTO ..." />
+            <marker date="1429152836408" expanded="true" signature="14448:14527" placeholder="INSERT INTO ..." />
+            <marker date="1429152836408" expanded="true" signature="15959:16146" placeholder="INSERT INTO ..." />
+            <marker date="1429152836408" expanded="true" signature="17209:17272" placeholder="SELECT * FRO..Owner..." />
           </folding>
         </state>
       </provider>
@@ -1243,7 +1330,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="612">
           <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1308,19 +1394,22 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6480">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1428439112352" expanded="true" signature="1157:1293" placeholder="SELECT Usern..Owner..." />
-            <marker date="1428439112352" expanded="true" signature="2844:2891" placeholder="SELECT * FRO..Car..." />
-            <marker date="1428439112352" expanded="true" signature="3834:3903" placeholder="SELECT Usern..Owner..." />
-            <marker date="1428439112352" expanded="true" signature="5193:5242" placeholder="SELECT * FRO..Journey..." />
-            <marker date="1428439112352" expanded="true" signature="6208:6256" placeholder="SELECT * FRO..Timestamp..." />
-            <marker date="1428439112352" expanded="true" signature="7378:7479" placeholder="INSERT INTO ..." />
-            <marker date="1428439112352" expanded="true" signature="8739:8803" placeholder="SELECT Usern..Owner..." />
-            <marker date="1428439112352" expanded="true" signature="9135:9230" placeholder="INSERT INTO ..." />
-            <marker date="1428439112352" expanded="true" signature="10020:10045" placeholder="SELECT Owner..Owner..." />
-            <marker date="1428439112352" expanded="true" signature="11026:11135" placeholder="INSERT INTO ..." />
-            <marker date="1428439112352" expanded="true" signature="12088:12167" placeholder="INSERT INTO ..." />
-            <marker date="1428439112352" expanded="true" signature="13599:13786" placeholder="INSERT INTO ..." />
-            <marker date="1428439112352" expanded="true" signature="14832:14895" placeholder="SELECT * FRO..Owner..." />
+            <marker date="1429152836408" expanded="true" signature="1251:1387" placeholder="SELECT Usern..Owner..." />
+            <marker date="1429152836408" expanded="true" signature="2938:2985" placeholder="SELECT * FRO..Car..." />
+            <marker date="1429152836408" expanded="true" signature="3989:4094" placeholder="SELECT * FRO..car..." />
+            <marker date="1429152836408" expanded="true" signature="4364:4473" placeholder="SELECT `Fuel..Timestamp..." />
+            <marker date="1429152836408" expanded="true" signature="4656:4751" placeholder="SELECT time ..Timestamp..." />
+            <marker date="1429152836408" expanded="true" signature="6194:6263" placeholder="SELECT Usern..Owner..." />
+            <marker date="1429152836408" expanded="true" signature="7553:7602" placeholder="SELECT * FRO..Journey..." />
+            <marker date="1429152836408" expanded="true" signature="8568:8616" placeholder="SELECT * FRO..Timestamp..." />
+            <marker date="1429152836408" expanded="true" signature="9738:9839" placeholder="INSERT INTO ..." />
+            <marker date="1429152836408" expanded="true" signature="11099:11163" placeholder="SELECT Usern..Owner..." />
+            <marker date="1429152836408" expanded="true" signature="11495:11590" placeholder="INSERT INTO ..." />
+            <marker date="1429152836408" expanded="true" signature="12380:12405" placeholder="SELECT Owner..Owner..." />
+            <marker date="1429152836408" expanded="true" signature="13386:13495" placeholder="INSERT INTO ..." />
+            <marker date="1429152836408" expanded="true" signature="14448:14527" placeholder="INSERT INTO ..." />
+            <marker date="1429152836408" expanded="true" signature="15959:16146" placeholder="INSERT INTO ..." />
+            <marker date="1429152836408" expanded="true" signature="17209:17272" placeholder="SELECT * FRO..Owner..." />
           </folding>
         </state>
       </provider>
@@ -1396,19 +1485,22 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5688">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1428439112352" expanded="true" signature="1157:1293" placeholder="SELECT Usern..Owner..." />
-            <marker date="1428439112352" expanded="true" signature="2844:2891" placeholder="SELECT * FRO..Car..." />
-            <marker date="1428439112352" expanded="true" signature="3834:3903" placeholder="SELECT Usern..Owner..." />
-            <marker date="1428439112352" expanded="true" signature="5193:5242" placeholder="SELECT * FRO..Journey..." />
-            <marker date="1428439112352" expanded="true" signature="6208:6256" placeholder="SELECT * FRO..Timestamp..." />
-            <marker date="1428439112352" expanded="true" signature="7378:7479" placeholder="INSERT INTO ..." />
-            <marker date="1428439112352" expanded="true" signature="8739:8803" placeholder="SELECT Usern..Owner..." />
-            <marker date="1428439112352" expanded="true" signature="9135:9230" placeholder="INSERT INTO ..." />
-            <marker date="1428439112352" expanded="true" signature="10020:10045" placeholder="SELECT Owner..Owner..." />
-            <marker date="1428439112352" expanded="true" signature="11026:11135" placeholder="INSERT INTO ..." />
-            <marker date="1428439112352" expanded="true" signature="12088:12167" placeholder="INSERT INTO ..." />
-            <marker date="1428439112352" expanded="true" signature="13599:13786" placeholder="INSERT INTO ..." />
-            <marker date="1428439112352" expanded="true" signature="14832:14895" placeholder="SELECT * FRO..Owner..." />
+            <marker date="1429152836408" expanded="true" signature="1251:1387" placeholder="SELECT Usern..Owner..." />
+            <marker date="1429152836408" expanded="true" signature="2938:2985" placeholder="SELECT * FRO..Car..." />
+            <marker date="1429152836408" expanded="true" signature="3989:4094" placeholder="SELECT * FRO..car..." />
+            <marker date="1429152836408" expanded="true" signature="4364:4473" placeholder="SELECT `Fuel..Timestamp..." />
+            <marker date="1429152836408" expanded="true" signature="4656:4751" placeholder="SELECT time ..Timestamp..." />
+            <marker date="1429152836408" expanded="true" signature="6194:6263" placeholder="SELECT Usern..Owner..." />
+            <marker date="1429152836408" expanded="true" signature="7553:7602" placeholder="SELECT * FRO..Journey..." />
+            <marker date="1429152836408" expanded="true" signature="8568:8616" placeholder="SELECT * FRO..Timestamp..." />
+            <marker date="1429152836408" expanded="true" signature="9738:9839" placeholder="INSERT INTO ..." />
+            <marker date="1429152836408" expanded="true" signature="11099:11163" placeholder="SELECT Usern..Owner..." />
+            <marker date="1429152836408" expanded="true" signature="11495:11590" placeholder="INSERT INTO ..." />
+            <marker date="1429152836408" expanded="true" signature="12380:12405" placeholder="SELECT Owner..Owner..." />
+            <marker date="1429152836408" expanded="true" signature="13386:13495" placeholder="INSERT INTO ..." />
+            <marker date="1429152836408" expanded="true" signature="14448:14527" placeholder="INSERT INTO ..." />
+            <marker date="1429152836408" expanded="true" signature="15959:16146" placeholder="INSERT INTO ..." />
+            <marker date="1429152836408" expanded="true" signature="17209:17272" placeholder="SELECT * FRO..Owner..." />
           </folding>
         </state>
       </provider>
@@ -1493,84 +1585,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="396">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/vehicleData.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ownerData.html">
+    <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.37037" vertical-offset="8" max-vertical-offset="594">
-          <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="680">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding>
+            <marker date="1428415949935" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..owner..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/getJourney.html">
+    <entry file="file://$PROJECT_DIR$/js/themes/gray.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="612">
-          <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/getTimestamp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="224" max-vertical-offset="648">
-          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/vehicleData.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="594">
-          <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="306">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/webApp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="468">
-          <caret line="9" column="71" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="890" max-vertical-offset="1314">
-          <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/comments.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1296" max-vertical-offset="1800">
-          <caret line="88" column="21" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4471">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="702">
+        <state vertical-scroll-proportion="-12.653846" vertical-offset="62" max-vertical-offset="663">
           <caret line="23" column="62" selection-start-line="23" selection-start-column="62" selection-end-line="23" selection-end-column="62" />
           <folding />
         </state>
@@ -1578,30 +1618,115 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/addVehicle.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="378">
-          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+        <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="357">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="374">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/getJourney.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="578">
+          <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/getTimestamp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="612">
+          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/comments.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1022" max-vertical-offset="1700">
+          <caret line="88" column="21" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="289">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/webApp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="442">
+          <caret line="9" column="71" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.384615" vertical-offset="627" max-vertical-offset="1241">
+          <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/vehicleData.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="561">
+          <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ownerData.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="561">
+          <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/commentsapp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3851132" vertical-offset="6012" max-vertical-offset="6987">
-          <caret line="405" column="30" selection-start-line="405" selection-start-column="30" selection-end-line="405" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="7905">
+          <caret line="122" column="74" selection-start-line="122" selection-start-column="62" selection-end-line="122" selection-end-column="74" />
           <folding>
-            <marker date="1428439112352" expanded="true" signature="1157:1293" placeholder="SELECT Usern..Owner..." />
-            <marker date="1428439112352" expanded="true" signature="2844:2891" placeholder="SELECT * FRO..Car..." />
-            <marker date="1428439112352" expanded="true" signature="3834:3903" placeholder="SELECT Usern..Owner..." />
-            <marker date="1428439112352" expanded="true" signature="5193:5242" placeholder="SELECT * FRO..Journey..." />
-            <marker date="1428439112352" expanded="true" signature="6208:6256" placeholder="SELECT * FRO..Timestamp..." />
-            <marker date="1428439112352" expanded="true" signature="7378:7479" placeholder="INSERT INTO ..." />
-            <marker date="1428439112352" expanded="true" signature="8739:8803" placeholder="SELECT Usern..Owner..." />
-            <marker date="1428439112352" expanded="true" signature="9135:9230" placeholder="INSERT INTO ..." />
-            <marker date="1428439112352" expanded="true" signature="10020:10045" placeholder="SELECT Owner..Owner..." />
-            <marker date="1428439112352" expanded="true" signature="11026:11135" placeholder="INSERT INTO ..." />
-            <marker date="1428439112352" expanded="true" signature="12088:12167" placeholder="INSERT INTO ..." />
-            <marker date="1428439112352" expanded="true" signature="13599:13786" placeholder="INSERT INTO ..." />
-            <marker date="1428439112352" expanded="true" signature="14832:14895" placeholder="SELECT * FRO..Owner..." />
+            <marker date="1429152836408" expanded="true" signature="1251:1387" placeholder="SELECT Usern..Owner..." />
+            <marker date="1429152836408" expanded="true" signature="2938:2985" placeholder="SELECT * FRO..Car..." />
+            <marker date="1429152836408" expanded="true" signature="3989:4094" placeholder="SELECT * FRO..car..." />
+            <marker date="1429152836408" expanded="true" signature="4364:4473" placeholder="SELECT `Fuel..Timestamp..." />
+            <marker date="1429152836408" expanded="true" signature="4656:4751" placeholder="SELECT time ..Timestamp..." />
+            <marker date="1429152836408" expanded="true" signature="6194:6263" placeholder="SELECT Usern..Owner..." />
+            <marker date="1429152836408" expanded="true" signature="7553:7602" placeholder="SELECT * FRO..Journey..." />
+            <marker date="1429152836408" expanded="true" signature="8568:8616" placeholder="SELECT * FRO..Timestamp..." />
+            <marker date="1429152836408" expanded="true" signature="9738:9839" placeholder="INSERT INTO ..." />
+            <marker date="1429152836408" expanded="true" signature="11099:11163" placeholder="SELECT Usern..Owner..." />
+            <marker date="1429152836408" expanded="true" signature="11495:11590" placeholder="INSERT INTO ..." />
+            <marker date="1429152836408" expanded="true" signature="12380:12405" placeholder="SELECT Owner..Owner..." />
+            <marker date="1429152836408" expanded="true" signature="13386:13495" placeholder="INSERT INTO ..." />
+            <marker date="1429152836408" expanded="true" signature="14448:14527" placeholder="INSERT INTO ..." />
+            <marker date="1429152836408" expanded="true" signature="15959:16146" placeholder="INSERT INTO ..." />
+            <marker date="1429152836408" expanded="true" signature="17209:17272" placeholder="SELECT * FRO..Owner..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/fuelData.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.335034" vertical-offset="364" max-vertical-offset="1105">
+          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

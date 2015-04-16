@@ -7,6 +7,12 @@ def md5(word):
     hash.update(word.encode('utf-8'))
     return hash.hexdigest()
 
+def chartify(input):
+    l =[]
+    for i in input:
+        l.append(float(i[0]))
+    return l
+
 def connectToDB():
     return pymysql.connect(host='localhost', port=3306, user='root', passwd='gaz360', db='obdreader')
 @app.route('/')
@@ -31,7 +37,6 @@ def login():
     conn = connectToDB()
 
     cur = conn.cursor()
-
     sql ="SELECT Username FROM Owner WHERE Username = \"" + request.form['Username'] + "\" AND password = \""+ md5(request.form['Password']) + "\""
 
 
@@ -79,6 +84,54 @@ def vehicleData():
         return render_template('webApp.html', vehicle_data_url=url_for('vehicleData'),
                                add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
                                sign_out_url=url_for('signOut'), user=session['username'],messages=error)
+@app.route('/fuelData')
+def fuelData():
+    if session['username'] is None:
+        return render_template("home.html",
+                               the_title="Welcome to the OBD Reader, where all the fun is at.",
+                               login_url=url_for("loginscreen"),)
+
+    conn = connectToDB()
+
+    cur = conn.cursor()
+    i = session['username']
+    print(i)
+    #reg = request.form.get("registration")
+    reg = "04-OY-662"
+    sql = "SELECT * FROM car INNER JOIN owner WHERE owner.Username = \""+ i + "\" AND Registration = \"" + reg + "\""
+    print(sql)
+
+    if cur.execute(sql) != 0:
+        result = list(cur.fetchall())
+
+        #select all timestamps for the car
+        #SELECT * FROM timestamp INNER JOIN journey WHERE Registration = whatever
+        try:
+            print("HERE")
+            sql = "SELECT `Fuel Consumption` FROM Timestamp INNER JOIN Journey Registration WHERE Registration = \"" + reg + "\""
+            print(sql)
+            if cur.execute(sql) <= 0:
+                raise Exception("Nothing found")
+
+            fuel = chartify(list(cur.fetchall()))
+
+            sql = "SELECT time FROM Timestamp INNER JOIN Journey Registration WHERE Registration = \"" + reg + "\""
+            if cur.execute(sql) <= 0:
+                raise Exception("Nothing found")
+            times = list(cur.fetchall())
+            print(fuel,times)
+            return render_template('fuelData.html', fuel=fuel,registration=reg, home_url=url_for('webApp'))
+        except:
+            error = "An error has occured retrieving your account."
+            return render_template('webApp.html', vehicle_data_url=url_for('vehicleData'),
+                                   add_vehicle_url = url_for('addVehicle'), owner_data_url =url_for('ownerData'),
+                                   sign_out_url=url_for('signOut'), user=session['username'],messages=error)
+    else:
+        error = "There is no record of your vehicle, consider adding one."
+        return render_template('webApp.html', vehicle_data_url=url_for('vehicleData'),
+                               add_vehicle_url = url_for('addVehicle'),owner_data_url =url_for('ownerData'),
+                               sign_out_url=url_for('signOut'), user=session['username'],messages=error)
+
 
 @app.route('/ownerData')
 def ownerData():
@@ -361,14 +414,15 @@ def mobile_login():
             try:
                 #unpack JSON
                 # Parse the JSON
+
                 obj = request.get_json()
+                print(obj)
                 #obj = json.loads(raw_obj)
                 response = {}
                 response['result'] = 'False'
-                json_data = json.dumps(response)
-                username = obj['Username']
-                passwd = obj['Passwd']
-
+                username = obj['username']
+                passwd = obj['passwd']
+                print(username,passwd)
                 sql = "SELECT * FROM Owner WHERE Username = '{0}' AND Password = '{1}'".format(username,passwd)
 
 
