@@ -74,8 +74,8 @@ def vehicleData():
 
     cur = conn.cursor()
     i = session['username']
-    sql = "SELECT * FROM Car WHERE OwnerId = \" "+ i + "\""
-
+    sql = "SELECT * FROM car INNER JOIN Owner WHERE Username = \""+ i + "\""
+    print(sql)
     if cur.execute(sql) != 0:
         result = list(cur.fetchall())
         return render_template('vehicleData.html',result = result,home_url = url_for('webApp'))
