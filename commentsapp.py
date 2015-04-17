@@ -14,7 +14,7 @@ def chartify(input):
     return l
 
 def connectToDB():
-    return pymysql.connect(host='localhost', port=3306, user='root', passwd='gaz360', db='obdreader')
+    return pymysql.connect(host='localhost', port=3306, user='root', passwd='gaz360', db='chiloutus$obdreader')
 @app.route('/')
 def display_home():
     try:
@@ -74,10 +74,11 @@ def vehicleData():
 
     cur = conn.cursor()
     i = session['username']
-    sql = "SELECT * FROM car INNER JOIN Owner WHERE Username = \""+ i + "\""
+    sql = "SELECT * FROM Car INNER JOIN Owner WHERE Username = \""+ i + "\""
     print(sql)
     if cur.execute(sql) != 0:
         result = list(cur.fetchall())
+        print(result)
         return render_template('vehicleData.html',result = result,home_url = url_for('webApp'))
     else:
         error = "There is no record of your vehicle, consider adding one."
@@ -98,7 +99,7 @@ def fuelData():
     print(i)
     #reg = request.form.get("registration")
     reg = "04-OY-662"
-    sql = "SELECT * FROM car INNER JOIN owner WHERE owner.Username = \""+ i + "\" AND Registration = \"" + reg + "\""
+    sql = "SELECT * FROM Car INNER JOIN Owner WHERE Owner.Username = \""+ i + "\" AND Registration = \"" + reg + "\""
     print(sql)
 
     if cur.execute(sql) != 0:
@@ -190,7 +191,7 @@ def getTimestamp():
     conn = connectToDB()
     cur = conn.cursor()
     id = request.args.get('id')
-    sql = "SELECT * FROM Timestamp WHERE idJourney = \"{}\"".format(id)
+    sql = "SELECT * FROM Timestamp WHERE JourneyId = \"{}\"".format(id)
     if cur.execute(sql) != 0:
         result = list(cur.fetchall())
         return render_template('getJourney.html',result = result,home_url = url_for('webApp'))
@@ -340,22 +341,92 @@ def new_journey():
                 #print(raw_obj)
                 #obj = json.loads(raw_obj)
                 #get current time
+                print("all okay")
                 curTime = time.strftime("%c")
                 registration = obj['registration']
+                response = {}
+                response['result'] = 'False'
 
 
                 sql = "INSERT INTO Journey (startTime,endTime,Registration) VALUES ('{0}','{1}','{2}')" \
                     .format(curTime,"",registration)
                 cur.execute(sql)
+                print("made it this far")
 
                 conn.commit()
+                sql = "SELECT Max(JourneyId) FROM Journey WHERE Registration = \"" + registration + "\""
 
-                return "Success"
+                cur.execute(sql)
+                if cur.rowcount > 0:
+                    result = cur.fetchone()
+                    response['result'] = 'True'
+                    print("crashed yet?")
+                    print(result)
+                    response['JourneyId'] = result[0]
+                    print("I think i crashed")
+                    json_data = json.dumps(response)
+                    return json_data
+
+                json_data = json.dumps(response)
+                return json_data
             except Exception as e:
                 #do something
                 print("error")
                 print(traceback.format_exc())
-                return "Error, bad one"
+                json_data = json.dumps(response)
+                return json_data
+
+    else:
+        return "Error"
+
+@app.route('/update/journey', methods=['POST'])
+def update_journey():
+    conn = connectToDB()
+
+    cur = conn.cursor()
+
+    if request.method == 'POST':
+        if request.headers['Content-Type'] == 'application/json':
+            try:
+                #unpack JSON
+                # Parse the JSON
+                obj = request.get_json()
+                #print(raw_obj)
+                #obj = json.loads(raw_obj)
+                #get current time
+                print("all okay")
+                curTime = time.strftime("%c")
+                registration = obj['registration']
+                JourneyId = obj['JourneyId']
+                response = {}
+                response['result'] = 'False'
+
+
+                sql = "UPDATE Journey SET `endTime`=\"" +str(curTime) + "\" WHERE `JourneyId`=\""+ str(JourneyId) + "\""
+                print(sql)
+                cur.execute(sql)
+                print("made it this far")
+
+                conn.commit()
+
+                cur.execute(sql)
+                if cur.rowcount > 0:
+                    result = cur.fetchone()
+                    response['result'] = 'True'
+                    print("crashed yet?")
+                    print(result)
+                    print("I think i crashed")
+                    json_data = json.dumps(response)
+                    return json_data
+
+                json_data = json.dumps(response)
+                return json_data
+            except Exception as e:
+                #do something
+                print("error")
+                print(traceback.format_exc())
+                json_data = json.dumps(response)
+                return json_data
 
     else:
         return "Error"
@@ -374,35 +445,38 @@ def new_timestamp():
                 #obj = json.loads(raw_obj)
                 #get current time
                 curTime = time.strftime("%c")
-                GPSCoords = obj['GPSCoords']
-                FuelLvl = obj['FuelLvl']
-                FuelCsmt = obj['FuelCsmt']
+                GPSCoords = obj['GPS']
+                FuelLvl = obj['fuellevel']
+                FuelCsmt = obj['fuelcons']
                 RPM = obj['RPM']
-                Temp = obj['Temp']
-                Trblcode = obj['Trblecode']
-                idJourney = obj['idJourney']
+                Temp = obj['temp']
+                Trblcode = obj['trouble']
+                JourneyId = obj['JourneyId']
+                response = {}
+                response['result'] = 'False'
 
 
-                #sql = "INSERT INTO TimeStamp (GPSCoords,Fuel Level,Fuel Consumption,RPM,Temperature,Trouble Code,time,idJourney)" \
-                #      " VALUES ('{0}','{1}','{2}'',{3}','{4}','{5}','{6}','{7}')" .format(GPSCoords,FuelLvl,FuelCsmt,RPM,Temp,Trblcode,curTime,idJourney)
-
-                sql = "INSERT INTO `Timestamp` (`GPSCoords`, `Fuel Level`, `Fuel Consumption`, `RPM`, `Temperature`, `Trouble Code`, `time`, `idJourney`) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')"\
-                    .format(GPSCoords,FuelLvl,FuelCsmt,RPM,Temp,Trblcode,curTime,idJourney)
+                sql = "INSERT INTO `Timestamp` (`GPSCoords`, `FuelLevel`, `FuelConsumption`, `RPM`, `Temperature`, `TroubleCode`, `Time`, `JourneyId`) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')"\
+                    .format(GPSCoords,FuelLvl,FuelCsmt,RPM,Temp,Trblcode,curTime,JourneyId)
 
                 print(sql)
                 cur.execute(sql)
 
                 conn.commit()
-
-                return "Success"
+                response['result'] = 'True'
+                json_data = json.dumps(response)
+                return json_data
             except Exception as e:
                 #do something
                 print("error")
                 print(traceback.format_exc())
-                return "Error, bad one"
+                json_data = json.dumps(response)
+                return json_data
 
     else:
-        return "Error"
+        json_data = json.dumps(response)
+        return json_data
+
 @app.route('/mobile/login', methods=['POST'])
 def mobile_login():
     conn = connectToDB()
@@ -420,6 +494,7 @@ def mobile_login():
                 #obj = json.loads(raw_obj)
                 response = {}
                 response['result'] = 'False'
+                response['JourneyId'] = ""
                 username = obj['username']
                 passwd = obj['passwd']
                 print(username,passwd)
@@ -428,13 +503,13 @@ def mobile_login():
 
                 print(sql)
                 cur.execute(sql)
-                if cur.rowcount == 0:
+                if cur.rowcount != 0:
                     response['result'] = 'True'
-                    json_data = json.dumps(response)#
+                    json_data = json.dumps(response)
                     conn.commit()
                     return json_data
                 else:
-                    json_data = json.dumps(response)#
+                    json_data = json.dumps(response)
                     return json_data
 
             except Exception as e:
