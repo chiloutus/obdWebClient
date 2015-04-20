@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+
+    <div id="header">
+    <h2><a href="{{ owner_data_url }}"> {{ user }}</a></h2>
+    <h1>Vehicle Location</h1><br>
+    <table border=1>
+    <img src="http://maps.google.com/maps/api/staticmap?center={{ coords }}&zoom=8&size=400x300&sensor=false" style="width: 400px; height: 400px;" />
+    </table>
+
+    <a href={{home_url}}>Home</a><br>
+    <a href={{sign_out_url}}>Sign Out</a>
+    </div>
+{% endblock %}

@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3735031b-df46-4547-9753-d46c02373294" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/obdreader.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commentsapp.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/newVehicle.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/vehicleData.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/home2.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/fuelData.html" afterPath="$PROJECT_DIR$/templates/fuelData.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/getJourney.html" afterPath="$PROJECT_DIR$/templates/getJourney.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/getTimestamp.html" afterPath="$PROJECT_DIR$/templates/getTimestamp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/login.html" afterPath="$PROJECT_DIR$/templates/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/ownerData.html" afterPath="$PROJECT_DIR$/templates/ownerData.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/vehicleData.html" afterPath="$PROJECT_DIR$/templates/vehicleData.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/webApp.html" afterPath="$PROJECT_DIR$/templates/webApp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="3735031b-df46-4547-9753-d46c02373294" name="Default" comment="" />
     <ignored path="OBDReader.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -31,6 +16,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/OBDReader$OBDReader.coverage" NAME="OBDReader Coverage Results" MODIFIED="1429563424145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/OBDReader$commentsapp.coverage" NAME="commentsapp Coverage Results" MODIFIED="1429555991467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/OBDReader$commentsapp__2_.coverage" NAME="commentsapp (2) Coverage Results" MODIFIED="1429566399016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="$PROJECT_DIR$" />
@@ -41,10 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="obdreader.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="obdreader.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/obdreader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3235955">
+            <state vertical-scroll-proportion="0.0">
               <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
@@ -71,12 +57,52 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vehicleData.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/vehicleData.html">
+      <file leaf-file-name="err.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/lib/python3.4/dist-packages/pymysql/err.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+              <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/lib/python3.4/dist-packages/flask/app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.266667">
+              <caret line="122" column="51" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="commentsapp.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/commentsapp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4390244">
+              <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+                <marker date="1429566880293" expanded="true" signature="1257:1389" placeholder="SELECT Usern..Owner..." />
+                <marker date="1429566880293" expanded="true" signature="2862:2907" placeholder="SELECT * FRO..Car..." />
+                <marker date="1429566880293" expanded="true" signature="3945:4046" placeholder="SELECT * FRO..Car..." />
+                <marker date="1429566880293" expanded="true" signature="4310:4416" placeholder="SELECT `Fuel..Timestamp..." />
+                <marker date="1429566880293" expanded="true" signature="6046:6116" placeholder="SELECT Usern..Owner..." />
+                <marker date="1429566880293" expanded="true" signature="7392:7439" placeholder="SELECT * FRO..Journey..." />
+                <marker date="1429566880293" expanded="true" signature="8481:8527" placeholder="SELECT * FRO..Timestamp..." />
+                <marker date="1429566880293" expanded="true" signature="9337:9405" placeholder="SELECT * FRO..Timestamp..." />
+                <marker date="1429566880293" expanded="true" signature="11072:11177" placeholder="INSERT INTO ..." />
+                <marker date="1429566880293" expanded="true" signature="12438:12500" placeholder="SELECT Usern..Owner..." />
+                <marker date="1429566880293" expanded="true" signature="12826:12929" placeholder="INSERT INTO ..." />
+                <marker date="1429566880293" expanded="true" signature="13714:13739" placeholder="SELECT Owner..Owner..." />
+                <marker date="1429566880293" expanded="true" signature="14700:14819" placeholder="INSERT INTO ..." />
+                <marker date="1429566880293" expanded="true" signature="15885:15968" placeholder="INSERT INTO ..." />
+                <marker date="1429566880293" expanded="true" signature="16154:16232" placeholder="SELECT Max(J..Journey..." />
+                <marker date="1429566880293" expanded="true" signature="17699:17795" placeholder="UPDATE Journ..." />
+                <marker date="1429566880293" expanded="true" signature="19448:19639" placeholder="INSERT INTO ..." />
+                <marker date="1429566880293" expanded="true" signature="20904:20963" placeholder="SELECT * FRO..Owner..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,7 +110,7 @@
       <file leaf-file-name="fuelData.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/fuelData.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-29.074074">
+            <state vertical-scroll-proportion="0.0">
               <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
               <folding />
             </state>
@@ -94,18 +120,8 @@
       <file leaf-file-name="getJourney.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/getJourney.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.3333335">
-              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home.html">
-          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -114,7 +130,7 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.740741">
+            <state vertical-scroll-proportion="0.0">
               <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
               <folding />
             </state>
@@ -124,7 +140,7 @@
       <file leaf-file-name="getTimestamp.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/getTimestamp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
               <folding />
             </state>
@@ -134,20 +150,8 @@
       <file leaf-file-name="getLocation.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/getLocation.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ownerData.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/ownerData.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.0">
-              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -156,7 +160,7 @@
       <file leaf-file-name="webApp.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/webApp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6666667">
+            <state vertical-scroll-proportion="0.0">
               <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="47" />
               <folding />
             </state>
@@ -194,10 +198,10 @@
         <option value="$PROJECT_DIR$/templates/getJourney.html" />
         <option value="$PROJECT_DIR$/templates/ownerData.html" />
         <option value="$PROJECT_DIR$/templates/vehicleData.html" />
-        <option value="$PROJECT_DIR$/commentsapp.py" />
         <option value="$PROJECT_DIR$/templates/getTimestamp.html" />
         <option value="$PROJECT_DIR$/templates/getLocation.html" />
         <option value="$PROJECT_DIR$/obdreader.py" />
+        <option value="$PROJECT_DIR$/commentsapp.py" />
       </list>
     </option>
   </component>
@@ -215,7 +219,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="width" value="960" />
+    <option name="width" value="1920" />
     <option name="height" value="1080" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -336,7 +340,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -386,6 +389,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -419,7 +423,7 @@
       <recent name="F:\IdeaProjects\Python\OBDReader\commentsapp-C4\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.OBDReader">
+  <component name="RunManager" selected="Python.commentsapp (2)">
     <configuration default="false" name="splash.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="file://$PROJECT_DIR$/static/splash.html">
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
@@ -448,6 +452,24 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="commentsapp (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="OBDReader" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commentsapp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -913,17 +935,19 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.splash.html" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.home.html" />
-      <item index="2" class="java.lang.String" itemvalue="Python.OBDReader" />
-      <item index="3" class="java.lang.String" itemvalue="Python.commentsapp" />
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Python.OBDReader" />
+      <item index="1" class="java.lang.String" itemvalue="Python.commentsapp" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.splash.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.home.html" />
       <item index="4" class="java.lang.String" itemvalue="Python.commentsapp (1)" />
+      <item index="5" class="java.lang.String" itemvalue="Python.commentsapp (2)" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.home.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.splash.html" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Python.commentsapp (2)" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.home.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.splash.html" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -993,6 +1017,7 @@
       <workItem from="1429281951832" duration="766000" />
       <workItem from="1429547860621" duration="4193000" />
       <workItem from="1429555006234" duration="5660000" />
+      <workItem from="1429566389739" duration="492000" />
     </task>
     <task id="LOCAL-00004" summary="Fixing an issue with the db being named incorrectly. Should resolve login issue.">
       <created>1427210327754</created>
@@ -1292,11 +1317,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139798000" />
+    <option name="totallyTimeSpent" value="140290000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="960" height="1080" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1305,16 +1330,17 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292978" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.02566735" sideWeight="0.71097046" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.02566735" sideWeight="0.28902954" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.02566735" sideWeight="0.7056962" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26591375" sideWeight="0.19916143" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1392405" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26591375" sideWeight="0.8037975" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.06918239" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26591375" sideWeight="0.8008386" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32883817" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1325,7 +1351,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16512346" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1390,22 +1415,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/getJourney.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1676,17 +1685,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python3.4/dist-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1835" column="0" selection-start-line="1835" selection-start-column="0" selection-end-line="1835" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python3.4/dist-packages/werkzeug/serving.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1731,7 +1729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1753,7 +1750,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/ownerData.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
           <folding />
         </state>
@@ -1761,7 +1758,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/getJourney.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.3333335">
+        <state vertical-scroll-proportion="0.0">
           <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
           <folding />
         </state>
@@ -1769,7 +1766,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/fuelData.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-29.074074">
+        <state vertical-scroll-proportion="0.0">
           <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
           <folding />
         </state>
@@ -1777,7 +1774,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/getTimestamp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
           <folding />
         </state>
@@ -1785,7 +1782,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.740741">
+        <state vertical-scroll-proportion="0.0">
           <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
           <folding />
         </state>
@@ -1793,7 +1790,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/webApp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6666667">
+        <state vertical-scroll-proportion="0.0">
           <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="47" />
           <folding />
         </state>
@@ -1801,17 +1798,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/getLocation.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/obdreader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3235955">
+        <state vertical-scroll-proportion="0.0">
           <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
@@ -1838,6 +1833,53 @@
       </provider>
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.4/dist-packages/pymysql/err.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.4/dist-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.266667">
+          <caret line="122" column="51" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commentsapp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4390244">
+          <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1429566880293" expanded="true" signature="1257:1389" placeholder="SELECT Usern..Owner..." />
+            <marker date="1429566880293" expanded="true" signature="2862:2907" placeholder="SELECT * FRO..Car..." />
+            <marker date="1429566880293" expanded="true" signature="3945:4046" placeholder="SELECT * FRO..Car..." />
+            <marker date="1429566880293" expanded="true" signature="4310:4416" placeholder="SELECT `Fuel..Timestamp..." />
+            <marker date="1429566880293" expanded="true" signature="6046:6116" placeholder="SELECT Usern..Owner..." />
+            <marker date="1429566880293" expanded="true" signature="7392:7439" placeholder="SELECT * FRO..Journey..." />
+            <marker date="1429566880293" expanded="true" signature="8481:8527" placeholder="SELECT * FRO..Timestamp..." />
+            <marker date="1429566880293" expanded="true" signature="9337:9405" placeholder="SELECT * FRO..Timestamp..." />
+            <marker date="1429566880293" expanded="true" signature="11072:11177" placeholder="INSERT INTO ..." />
+            <marker date="1429566880293" expanded="true" signature="12438:12500" placeholder="SELECT Usern..Owner..." />
+            <marker date="1429566880293" expanded="true" signature="12826:12929" placeholder="INSERT INTO ..." />
+            <marker date="1429566880293" expanded="true" signature="13714:13739" placeholder="SELECT Owner..Owner..." />
+            <marker date="1429566880293" expanded="true" signature="14700:14819" placeholder="INSERT INTO ..." />
+            <marker date="1429566880293" expanded="true" signature="15885:15968" placeholder="INSERT INTO ..." />
+            <marker date="1429566880293" expanded="true" signature="16154:16232" placeholder="SELECT Max(J..Journey..." />
+            <marker date="1429566880293" expanded="true" signature="17699:17795" placeholder="UPDATE Journ..." />
+            <marker date="1429566880293" expanded="true" signature="19448:19639" placeholder="INSERT INTO ..." />
+            <marker date="1429566880293" expanded="true" signature="20904:20963" placeholder="SELECT * FRO..Owner..." />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
