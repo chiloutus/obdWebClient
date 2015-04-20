@@ -2,29 +2,37 @@
 
 {% block the_body %}
     <div id="header">
-    <p>
-        Here is the data stored about your journey
-    </p>
+    <h2><a href="{{ owner_data_url }}"> {{ user }}</a></h2>
 
 
-    <table>
+    <table border=1>
         <th>Timestamp Id</th>
         <th>GPS location</th>
+        <th>Journey Id</th>
         <th>Fuel Level</th>
-        <th>Current Fuel Consumption</th>
+        <th>Fuel Consumption</th>
         <th>RPM</th>
-        <th>Temperature</th>
         <th>Trouble Code</th>
         {% for i in result %}
             <tr>
-                <th> {{ i[0] }} </th>
-                <td> {{ i[1] }} </td>
-                <td> {{ i[2] }} </td>
-                <td> {{ i[3] }} </td>
+                <th align="center"> {{ i[0] }} </th>
+                <th> <a href="getLocation?coords={{ i[1] }}">{{ i[1] }}</a>  </th>
+                <th> {{ i[2] }} </th>
+                <th> {{ i[3] }} </th>
+                <th> {{ i[4] }} </th>
+                <th> {{ i[5] }} </th>
+                <th> {% if i[6]|length >0 %} {{ i[6]}}
+                    {% else %}
+                        None
+                        {% endif %}
+                </th>
+
+
             </tr>
         {% endfor %}
     </table>
 
-    Go <a href={{home_url}}>Home</a>
+    <a href={{home_url}}>Home</a><br>
+    <a href={{sign_out_url}}>Sign Out</a>
     </div>
 {% endblock %}

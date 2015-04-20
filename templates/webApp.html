@@ -1,15 +1,12 @@
 {% extends "base.html" %}
 {% block the_body %}
-    {{ working_dir }}
     <div id="header">
-    <h2>{{ user }}</h2>
+    <h2><a href="{{ owner_data_url }}"> {{ user }}</a></h2>
         Please select from this list of options:
         <ul>
-
-            <a href="{{ vehicle_data_url }}"><img src="static/vehicleData.jpg" /></a>
-            <a href="{{ add_vehicle_url }}"><img src="static/newVehicle.jpg" /></a>
-            <li>Add a vehicle <a href="{{add_vehicle_url}}">here</a>.
-            <li>View Owner Data <a href="{{owner_data_url}}">here</a>.
+            <li> <a href="{{vehicle_data_url}}">View vehicle data</a>.
+            <li> <a href="{{add_vehicle_url}}">Add a vehicle</a>.
+            <li> <a href="{{add_vehicle_url}}">Add a vehicle</a>.
 
         </ul>
         <body>{{ messages if messages != None }}

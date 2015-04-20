@@ -2,6 +2,5 @@
 <project version="4">
   <component name="CppTools.Loader" reportImplicitCastToBool="false" reportNameReferencedOnce="false" version="3" compilerSelect="AUTO" />
   <component name="IdProvider" IDEtalkID="846562293CA802A9D07F58CB9CD607F7" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="Python 3.4.2 (C:\Python34\python.exe)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK" />
 </project>
-

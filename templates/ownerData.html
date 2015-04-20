@@ -7,7 +7,7 @@
     </p>
 
 
-    <table>
+    <table border=1>
         <th>Username</th>
         <th>Name</th>
         <th>Address</th>
@@ -21,7 +21,7 @@
             </tr>
         {% endfor %}
     </table>
-
-    Go <a href={{home_url}}>Home</a>
+    <a href={{home_url}}>Home</a><br>
+    <a href={{sign_out_url}}>Sign Out</a>
     </div>
 {% endblock %}
